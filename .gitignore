@@ -1,0 +1,64 @@
+# Environment Variables & Secrets (NEVER COMMIT)
+.env
+.env.*
+!.env.example
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Python Cache & Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing, Coverage & Linters
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# IDE & Editor Configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large / Raw Data (Keep samples and keepfiles)
+data/raw_resumes/*
+!data/raw_resumes/.gitkeep
+!data/raw_resumes/sample_resume.txt
+data/raw_jobs/*
+!data/raw_jobs/.gitkeep
+!data/raw_jobs/sample_jd.txt

@@ -1,0 +1,15 @@
+google-generativeai
+openai
+groq
+sentence-transformers
+faiss-cpu
+pdfplumber
+python-docx
+scikit-learn
+numpy
+pandas
+ollama
+tqdm
+python-dotenv
+rank_bm25
+spacy
