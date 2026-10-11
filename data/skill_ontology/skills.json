@@ -5985,6 +5985,12 @@
       "filecoin",
       "chainlink network"
     ],
+    "aptos blockchain": [
+      "aptos",
+      "aptos blockchain",
+      "move language",
+      "aptos network"
+    ],
     "bitcoin development": [
       "bitcoin core",
       "btc",

@@ -12,7 +12,7 @@ GROQ_API_KEY      = os.getenv("GROQ_API_KEY")
 
 # Model names — change here only, never hunt through code
 GEMINI_MODEL      = "gemini-2.0-flash"
-OPENROUTER_MODEL  = "qwen/qwen3-235b-a22b:free"
+OPENROUTER_MODEL  = "qwen/qwen3.7-plus:free"
 GROQ_MODEL        = "openai/gpt-oss-20b"
 OLLAMA_MODEL      = "qwen3:7b"
 EMBED_MODEL       = "all-MiniLM-L6-v2"

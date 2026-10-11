@@ -156,14 +156,43 @@ def show_pass1_results(resume_extracted: dict = None, jd_extracted: dict = None)
 
         name = resume_extracted.get("name") or "[italic dim]Not specified[/italic dim]"
         loc = resume_extracted.get("location") or "[italic dim]Not specified[/italic dim]"
-        exp = resume_extracted.get("years_experience")
-        exp_str = f"{exp} years" if exp is not None else "[italic dim]Unclear[/italic dim]"
-        if resume_extracted.get("experience_ambiguity"):
-            exp_str += " [bold yellow](⚠️ Flagged as Ambiguous)[/bold yellow]"
+        
+        # Calculate separate internship and full-time experience
+        roles = resume_extracted.get("past_roles") or []
+        internship_months = 0
+        fulltime_months = 0
+        
+        for role in roles:
+            title = role.get("title", "").lower()
+            duration_years = role.get("duration_years", 0)
+            duration_months = int(duration_years * 12)
+            
+            # Classify as internship if "intern" is in the title
+            if "intern" in title:
+                internship_months += duration_months
+            else:
+                fulltime_months += duration_months
+        
+        # Format experience display
+        def format_months_to_display(months):
+            if months == 0:
+                return "None"
+            years = months // 12
+            remaining_months = months % 12
+            if years == 0:
+                return f"{months} months"
+            elif remaining_months == 0:
+                return f"{years} year{'s' if years > 1 else ''}"
+            else:
+                return f"{years} year{'s' if years > 1 else ''} {remaining_months} month{'s' if remaining_months > 1 else ''}"
+        
+        internship_exp_str = format_months_to_display(internship_months)
+        fulltime_exp_str = format_months_to_display(fulltime_months)
 
         res_info.add_row("Candidate Name", str(name))
         res_info.add_row("Location", str(loc))
-        res_info.add_row("Total Experience", exp_str)
+        res_info.add_row("Internship Experience", internship_exp_str)
+        res_info.add_row("Full-Time Experience", fulltime_exp_str)
 
         # Education
         edu = resume_extracted.get("education") or {}

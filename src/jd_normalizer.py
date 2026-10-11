@@ -33,6 +33,7 @@ build_template_text = build_rich_text
 def build_jd_index(path: str = "data/skill_ontology/jd_templates.json"):
     """
     Loads standardized role templates from JSON and builds a FAISS FlatL2 vector index.
+    Uses rich embeddings that include template text + must-haves + nice-to-haves for better matching.
     """
     global _templates, _index
     target = Path(path)
@@ -46,10 +47,11 @@ def build_jd_index(path: str = "data/skill_ontology/jd_templates.json"):
     with open(target, "r", encoding="utf-8") as f:
         _templates = json.load(f)
 
+    # Use rich embeddings with must-haves and nice-to-haves
     texts = [build_rich_text(t) for t in _templates]
     embs = _embedder.encode(texts, convert_to_numpy=True).astype("float32")
-
-    _index = faiss.IndexFlatL2(embs.shape[1])
+    faiss.normalize_L2(embs)                    # normalize to unit vectors
+    _index = faiss.IndexFlatIP(embs.shape[1])   # IP = inner product = cosine
     _index.add(embs)
     print(f"[jd_normalizer] Built FAISS index with {len(_templates)} templates")
 
@@ -72,12 +74,13 @@ def normalize_jd(jd_text: str, top_k: int = 1) -> dict:
         }
 
     query_emb = _embedder.encode([jd_text[:2000]], convert_to_numpy=True).astype("float32")
+    faiss.normalize_L2(query_emb)               # normalize query too
     distances, indices = _index.search(query_emb, max(top_k, 1))
 
     best_idx = indices[0][0]
     best_dist = distances[0][0]
     best_template = _templates[best_idx]
-    similarity = float(1 / (1 + best_dist))  # convert L2 distance to similarity score in (0, 1]
+    similarity = float(best_dist)  # already IS cosine similarity now
 
     result = {
         "matched_role": best_template["role"],
