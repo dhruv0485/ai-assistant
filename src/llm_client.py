@@ -1,11 +1,12 @@
 # src/llm_client.py
 import json, time
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 from openai import OpenAI
 from config import *
 
-# Configure Gemini
-genai.configure(api_key=GEMINI_API_KEY)
+# Configure Gemini client (new google-genai SDK)
+client_gemini = genai.Client(api_key=GEMINI_API_KEY)
 
 # Configure OpenRouter + Groq clients (same OpenAI-compatible API)
 openrouter_client = OpenAI(
@@ -18,30 +19,24 @@ groq_client = OpenAI(
 )
 
 def call_gemini(system: str, user: str) -> str:
-    try:
-        model = genai.GenerativeModel(
-            GEMINI_MODEL,
-            system_instruction=system
-        )
-        response = model.generate_content(
-            user,
-            generation_config={"response_mime_type": "application/json"}
-        )
-        return response.text
-    except Exception as e:
-        # Google deprecation handler: fallback to current flash model if 2.0 returns 404
-        if "no longer available" in str(e).lower() or "404" in str(e):
-            fallback_model = "gemini-3.8-flash"
-            model = genai.GenerativeModel(
-                fallback_model,
-                system_instruction=system
-            )
-            response = model.generate_content(
-                user,
-                generation_config={"response_mime_type": "application/json"}
+    models_to_try = [GEMINI_MODEL, "gemini-3-flash-preview", "gemini-2.5-flash-lite", "gemini-flash-latest"]
+    last_error = None
+    for m_name in models_to_try:
+        try:
+            response = client_gemini.models.generate_content(
+                model=m_name,
+                contents=user,
+                config=types.GenerateContentConfig(
+                    system_instruction=system,
+                    response_mime_type="application/json",
+                    http_options=types.HttpOptions(timeout=15_000),
+                ),
             )
             return response.text
-        raise e
+        except Exception as e:
+            last_error = e
+            continue
+    raise last_error
 
 def call_openai_compatible(client, model: str, system: str, user: str) -> str:
     response = client.chat.completions.create(

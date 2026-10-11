@@ -1,4 +1,4 @@
-google-generativeai
+google-genai
 openai
 groq
 sentence-transformers
@@ -13,3 +13,4 @@ tqdm
 python-dotenv
 rank_bm25
 spacy
+supabase
