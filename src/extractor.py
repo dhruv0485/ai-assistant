@@ -11,6 +11,7 @@ if str(_PROJECT_ROOT) not in sys.path:
 
 from src.llm_client import call_llm
 from src.skill_ontology import normalize_skill
+from config import GEMINI_PASS1_MODEL
 
 EXTRACT_SYSTEM = """You are an expert resume and job description parser.
 Extract structured information EXACTLY as specified.
@@ -140,12 +141,12 @@ def _normalize_skill_list(skills: Any) -> List[str]:
 def extract_resume(resume_text: str, fast: bool = False) -> Dict[str, Any]:
     """
     Pass 1a: Extract structured fields from resume.
-    Uses Gemini (gemini-2.0-flash) by default via call_llm(fast=False).
+    Uses gemini-3.6-flash primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.1-flash-lite, gemini-3.8-flash).
     Normalizes all extracted skills through the technical skill ontology.
     Post-processes to catch commonly missed skills that appear in raw text.
     """
     prompt = RESUME_EXTRACT_PROMPT.format(resume_text=resume_text[:4000])
-    result = call_llm(EXTRACT_SYSTEM, prompt, fast=fast)
+    result = call_llm(EXTRACT_SYSTEM, prompt, fast=fast, model=GEMINI_PASS1_MODEL, stage="pass1")
     
     # Normalize all extracted skills through ontology
     result["skills"] = _normalize_skill_list(result.get("skills", []))
@@ -167,17 +168,28 @@ def extract_resume(resume_text: str, fast: bool = False) -> Dict[str, Any]:
 def extract_jd(jd_text: str, fast: bool = False) -> Dict[str, Any]:
     """
     Pass 1b: Extract structured fields from job description.
-    Uses Gemini (gemini-2.0-flash) by default via call_llm(fast=False).
+    Uses gemini-3.6-flash primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.1-flash-lite, gemini-3.8-flash).
     Normalizes must-have and nice-to-have skills through the technical skill ontology.
     Hard deduplicates in code to prevent skills appearing in both lists.
     """
     prompt = JD_EXTRACT_PROMPT.format(jd_text=jd_text[:4000])
-    result = call_llm(EXTRACT_SYSTEM, prompt, fast=fast)
+    result = call_llm(EXTRACT_SYSTEM, prompt, fast=fast, model=GEMINI_PASS1_MODEL, stage="pass1")
     
     # Normalize JD skills through ontology
     result["must_have_skills"] = _normalize_skill_list(result.get("must_have_skills", []))
     result["nice_to_have_skills"] = _normalize_skill_list(result.get("nice_to_have_skills", []))
     
+    # Post-process JD extraction — remove known hallucinated skills
+    HALLUCINATION_BLOCKLIST = ['game development', 'game design', 'unity', 'unreal']
+    result["must_have_skills"] = [
+        s for s in result.get("must_have_skills", [])
+        if s.lower() not in HALLUCINATION_BLOCKLIST
+    ]
+    result["nice_to_have_skills"] = [
+        s for s in result.get("nice_to_have_skills", [])
+        if s.lower() not in HALLUCINATION_BLOCKLIST
+    ]
+
     # Hard dedup in code — remove from nice_to_haves anything in must_haves
     musts = set(result.get("must_have_skills", []))
     result["nice_to_have_skills"] = [

@@ -10,17 +10,26 @@ GEMINI_API_KEY    = os.getenv("GEMINI_API_KEY")
 OPENROUTER_KEY    = os.getenv("OPENROUTER_API_KEY")
 GROQ_API_KEY      = os.getenv("GROQ_API_KEY")
 
-# Model names — change here only, never hunt through code
-GEMINI_MODEL      = "gemini-2.0-flash"
-OPENROUTER_MODEL  = "qwen/qwen3.7-plus:free"
+# Pass 1 model fallback chain for demand spikes
+PASS1_MODELS = [
+    ("gemini", "gemini-3.6-flash"),        # primary — workhorse
+    ("gemini", "gemini-3.5-flash"),        # fallback 1 — slightly heavier
+    ("gemini", "gemini-3.1-flash-lite"),   # fallback 2 — older but reliable
+    ("gemini", "gemini-3.8-flash"),        # fallback 3 — newest, may be busy
+]
+
+GEMINI_PASS1_MODEL = PASS1_MODELS[0][1]        # primary Pass 1: gemini-3.6-flash
+GEMINI_PASS2_MODEL = "gemini-3.5-flash-lite"   # Pass 2: Scoring, Explainability & Evidence
+GEMINI_MODEL       = GEMINI_PASS1_MODEL        # Default / base Gemini model
+OPENROUTER_MODEL  = "meta-llama/llama-3.3-70b-instruct:free"
 GROQ_MODEL        = "openai/gpt-oss-20b"
 OLLAMA_MODEL      = "qwen3:7b"
 EMBED_MODEL       = "all-MiniLM-L6-v2"
 
 # Decision thresholds
+REJECT_THRESHOLD    = 30    # score < 30  → reject with note
+ESCALATE_THRESHOLD  = 30    # score 30-64 → escalate to human review
 ADVANCE_THRESHOLD   = 65    # score >= 65 → auto-advance
-ESCALATE_THRESHOLD  = 40    # score 40-64 → escalate to human
-                            # score < 40  → reject with note
 CONFIDENCE_RUNS     = 3     # how many times to run borderline scoring
 BORDERLINE_LOW      = 45    # bottom of borderline zone
 BORDERLINE_HIGH     = 70    # top of borderline zone

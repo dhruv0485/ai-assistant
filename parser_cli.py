@@ -43,6 +43,20 @@ from src.extractor import extract_resume, extract_jd
 from src.skill_ontology import normalize_skill, match_skills, get_skill_category
 from src.jd_normalizer import normalize_jd
 
+# Import Pass 2 scorer, confidence, and decision functions
+from src.scorer import (
+    score_candidate,
+    score_with_confidence,
+    get_decision,
+)
+from config import (
+    ADVANCE_THRESHOLD,
+    ESCALATE_THRESHOLD,
+    REJECT_THRESHOLD,
+    GEMINI_PASS1_MODEL,
+    GEMINI_PASS2_MODEL,
+)
+
 console = Console()
 
 def open_file_dialog(title: str, filetypes: list) -> str:
@@ -61,10 +75,10 @@ def open_file_dialog(title: str, filetypes: list) -> str:
 def display_banner():
     banner_text = Text()
     banner_text.append("HYT SCREENING ", style="bold cyan")
-    banner_text.append("— Resume & Job Description Studio\n", style="bold white")
+    banner_text.append("— AI Candidate Screening Studio\n", style="bold white")
     banner_text.append("• Document Ingestion & PII Masking (PDF, DOCX, TXT)\n", style="dim")
-    banner_text.append("• Pass 1: Structured Extraction (Gemini 2.0 Flash)\n", style="cyan")
-    banner_text.append("• Semantic Skill Ontology & Normalization (38 Technical Domains)", style="dim")
+    banner_text.append(f"• Pass 1: Structured Extraction & Ontology Normalization ({GEMINI_PASS1_MODEL})\n", style="dim")
+    banner_text.append(f"• Pass 2: Score & Explain + Verbatim Evidence Verification ({GEMINI_PASS2_MODEL})", style="cyan")
     console.print(Panel(banner_text, box=box.ROUNDED, border_style="cyan"))
 
 def show_parse_results(resume_path: str, resume_parsed_text: str, jd_input: str, jd_parsed_text: str):
@@ -136,13 +150,13 @@ def show_parse_results(resume_path: str, resume_parsed_text: str, jd_input: str,
 
 def show_pass1_results(resume_extracted: dict = None, jd_extracted: dict = None):
     """
-    Renders structured Pass 1 extraction output (Gemini 2.0 Flash)
+    Renders structured Pass 1 extraction output (Gemini 3.6 Flash)
     and semantic skill ontology matching in Rich tables & panels.
     """
     console.print("\n")
     console.print(Panel(
         "[bold cyan]🤖 PASS 1: STRUCTURED EXTRACTION & SKILL ONTOLOGY[/bold cyan]\n"
-        "[dim]Engine: Gemini 2.0 Flash (Quality Path) | Ontology: 38 Technical Categories[/dim]",
+        f"[dim]Engine: {GEMINI_PASS1_MODEL} | Ontology: 38 Technical Categories[/dim]",
         box=box.DOUBLE,
         border_style="cyan"
     ))
@@ -344,15 +358,181 @@ def show_pass1_results(resume_extracted: dict = None, jd_extracted: dict = None)
 
             console.print(match_table)
 
+def show_pass2_results(score_result: dict, resume_extracted: dict = None, jd_extracted: dict = None):
+    """
+    Renders Pass 2 scoring, confidence calibration, evidence verification,
+    and recruiter explainability in rich formatting.
+    """
+    if not score_result:
+        return
+
+    score = score_result.get("score", 0)
+    decision = score_result.get("decision", "ESCALATE")
+    dec_label = score_result.get("decision_label", "")
+    confidence = score_result.get("confidence", "HIGH")
+    conf_scores = score_result.get("confidence_scores", [score])
+    variance = score_result.get("score_variance", 0)
+
+    if score >= ADVANCE_THRESHOLD:
+        badge_style = "bold white on green"
+        score_style = "bold green"
+        border_style = "green"
+        verdict_icon = "🚀"
+    elif score >= ESCALATE_THRESHOLD:
+        badge_style = "bold black on yellow"
+        score_style = "bold yellow"
+        border_style = "yellow"
+        verdict_icon = "⚠️"
+    else:
+        badge_style = "bold white on red"
+        score_style = "bold red"
+        border_style = "red"
+        verdict_icon = "❌"
+
+    conf_style = "bold green" if confidence == "HIGH" else "bold yellow"
+
+    console.print("\n")
+    # Big Executive Decision Panel
+    summary_text = Text()
+    summary_text.append("OVERALL MATCH SCORE: ", style="bold white")
+    summary_text.append(f"{score} / 100\n", style=f"{score_style} underline")
+    summary_text.append("RECOMMENDATION:     ", style="bold white")
+    summary_text.append(f" {verdict_icon} {decision} ", style=badge_style)
+    summary_text.append(f"  ({dec_label})\n", style="dim")
+    summary_text.append("CONFIDENCE RATING:  ", style="bold white")
+    summary_text.append(f"{confidence}", style=conf_style)
+
+    if len(conf_scores) > 1:
+        summary_text.append(f"  (Multi-pass scores: {conf_scores} | Variance: {variance} pts)", style="dim")
+
+    candidate_name = escape(str(resume_extracted.get("name") if resume_extracted else "Candidate"))
+    target_role = escape(str(jd_extracted.get("job_title") if jd_extracted else "Target Role"))
+
+    console.print(
+        Panel(
+            summary_text,
+            title="[bold cyan]🏆 PASS 2: CANDIDATE SCORING & EXPLAINABILITY ENGINE[/bold cyan]",
+            subtitle=f"[dim]Candidate: {candidate_name} | Role: {target_role} | Engine: {GEMINI_PASS2_MODEL}[/dim]",
+            border_style=border_style,
+            box=box.DOUBLE,
+            padding=(1, 2),
+        )
+    )
+
+    # Recruiter Briefing Panel
+    explanation = score_result.get("overall_explanation")
+    if explanation:
+        console.print("\n")
+        console.print(
+            Panel(
+                f"[white]{escape(explanation)}[/white]",
+                title="[bold cyan]📋 Recruiter Briefing & Overall Assessment[/bold cyan]",
+                subtitle="[dim]Evidence-backed summary for hiring manager & team[/dim]",
+                border_style="cyan",
+                box=box.ROUNDED,
+                padding=(1, 2),
+            )
+        )
+
+    # Experience & Education Fit Table
+    exp_fit = score_result.get("experience_fit") or {}
+    edu_fit = score_result.get("education_fit") or "unknown"
+    if exp_fit or edu_fit:
+        fit_table = Table(title="💼 Experience & Education Fit", box=box.ROUNDED, header_style="bold magenta")
+        fit_table.add_column("Dimension", style="bold white", width=22)
+        fit_table.add_column("Assessment & Notes", style="white")
+
+        req_y = exp_fit.get("required_years", "N/A")
+        cand_y = exp_fit.get("candidate_years", "N/A")
+        note = exp_fit.get("note", "")
+        exp_disp = f"Required: {req_y} yrs | Candidate: {cand_y} yrs"
+        if note:
+            exp_disp += f" — [italic]{escape(note)}[/italic]"
+        fit_table.add_row("Experience Alignment", exp_disp)
+
+        edu_style = "green" if edu_fit in ["strong", "adequate"] else ("red" if edu_fit == "weak" else "yellow")
+        fit_table.add_row("Education Fit", f"[{edu_style}]{str(edu_fit).upper()}[/{edu_style}]")
+        console.print(fit_table)
+
+    # Must-Have Requirements & Evidence Table
+    must_haves = score_result.get("must_have_met") or []
+    if must_haves:
+        must_table = Table(
+            title="📌 Must-Have Technical Requirements & Resume Evidence Verification",
+            box=box.ROUNDED,
+            header_style="bold green",
+        )
+        must_table.add_column("Required Skill", style="bold white", width=24)
+        must_table.add_column("Status", justify="center", width=12)
+        must_table.add_column("Exact Resume Evidence Cited", style="white")
+
+        for m in must_haves:
+            skill_name = escape(str(m.get("skill", "N/A")))
+            is_met = m.get("met", False)
+            evidence = m.get("evidence")
+            if is_met:
+                status_str = "[bold green]✔ MET[/bold green]"
+                ev_str = f"[italic cyan]\"{escape(evidence)}\"[/italic cyan]" if evidence else "[green]Confirmed in resume[/green]"
+            else:
+                status_str = "[bold red]❌ GAP[/bold red]"
+                ev_str = f"[dim red]{escape(evidence) if evidence else 'No explicit evidence found in resume'}[/dim red]"
+            must_table.add_row(skill_name, status_str, ev_str)
+        console.print(must_table)
+
+    # Nice-to-Have Requirements Table
+    nice_haves = score_result.get("nice_to_have_met") or []
+    if nice_haves:
+        nice_table = Table(
+            title="✨ Nice-to-Have Requirements & Evidence",
+            box=box.ROUNDED,
+            header_style="bold blue",
+        )
+        nice_table.add_column("Preferred Skill", style="bold white", width=24)
+        nice_table.add_column("Status", justify="center", width=12)
+        nice_table.add_column("Resume Evidence Cited", style="white")
+
+        for n in nice_haves:
+            skill_name = escape(str(n.get("skill", "N/A")))
+            is_met = n.get("met", False)
+            evidence = n.get("evidence")
+            if is_met:
+                status_str = "[bold green]✔ MET[/bold green]"
+                ev_str = f"[italic cyan]\"{escape(evidence)}\"[/italic cyan]" if evidence else "[green]Present in resume[/green]"
+            else:
+                status_str = "[dim]Unmet[/dim]"
+                ev_str = f"[dim]{escape(evidence) if evidence else 'Not explicitly stated in resume'}[/dim]"
+            nice_table.add_row(skill_name, status_str, ev_str)
+        console.print(nice_table)
+
+    # Strengths vs Gaps
+    strengths = score_result.get("strengths") or []
+    gaps = score_result.get("gaps") or []
+
+    if strengths or gaps:
+        cols = Table.grid(expand=True, padding=(0, 2))
+        cols.add_column(ratio=1)
+        cols.add_column(ratio=1)
+
+        s_text = "\n".join([f"• [green]{escape(s)}[/green]" for s in strengths]) if strengths else "[dim]None noted[/dim]"
+        g_text = "\n".join([f"• [red]{escape(g)}[/red]" for g in gaps]) if gaps else "[green]No critical gaps[/green]"
+
+        s_panel = Panel(s_text, title="[bold green]🌟 Key Standout Strengths[/bold green]", border_style="green", box=box.ROUNDED)
+        g_panel = Panel(g_text, title="[bold red]⚠️ Key Identified Gaps[/bold red]", border_style="red", box=box.ROUNDED)
+
+        cols.add_row(s_panel, g_panel)
+        console.print("\n")
+        console.print(cols)
+
 def run_parser_studio():
     resume_file = ""
     resume_parsed = ""
     jd_source = ""
     jd_parsed = ""
 
-    # Cached Pass 1 structured extractions
+    # Cached Pass 1 & Pass 2 outputs
     resume_extracted = None
     jd_extracted = None
+    score_result = None
 
     while True:
         console.clear()
@@ -391,6 +571,17 @@ def run_parser_studio():
         status_table.add_row("Pass 1 (Resume):", res_pass1_status)
         status_table.add_row("Pass 1 (JD):", jd_pass1_status)
 
+        # Pass 2 status in table
+        if score_result:
+            sc = score_result.get("score", 0)
+            dec = score_result.get("decision", "N/A")
+            conf = score_result.get("confidence", "HIGH")
+            dec_style = "bold green" if sc >= ADVANCE_THRESHOLD else ("bold yellow" if sc >= ESCALATE_THRESHOLD else "bold red")
+            p2_status = f"[{dec_style}]Score: {sc}/100 — {dec} ({conf} Conf)[/{dec_style}]"
+        else:
+            p2_status = "[dim italic]Not run[/dim italic]"
+        status_table.add_row("Pass 2 (Score):", p2_status)
+
         console.print(Panel(status_table, title="[bold]Current Session State[/bold]", border_style="dim", box=box.ROUNDED))
 
         console.print("[bold cyan]Select an action:[/bold cyan]")
@@ -398,12 +589,17 @@ def run_parser_studio():
         console.print("  [bold blue][2][/bold blue] 📂 [bold]Upload JD File[/bold] (Opens File Picker for PDF/DOCX/TXT)")
         console.print("  [bold yellow][3][/bold yellow] ✍️  [bold]Paste JD Text Directly[/bold]")
         console.print("  [bold magenta][4][/bold magenta] 📄 [bold]Run Parser & View Raw Parsed Text & PII Masking[/bold]")
-        console.print("  [bold cyan][5][/bold cyan] 🤖 [bold]Run Pass 1: Extract & Normalize (Gemini 2.0 Flash + Ontology)[/bold]")
+        console.print(f"  [bold cyan][5][/bold cyan] 🤖 [bold]Run Pass 1: Extract & Normalize ({GEMINI_PASS1_MODEL} + Ontology)[/bold]")
         console.print("  [bold magenta][6][/bold magenta] 🎯 [bold]Semantic Skill Matcher & Gap Analysis[/bold]")
-        console.print("  [bold white][7][/bold white] 🧪 [bold]Load Sample Resume & JD (Quick Demo)[/bold]")
+        console.print(f"  [bold green][7][/bold green] 🏆 [bold]Run Pass 2: Score & Explain + Evidence ({GEMINI_PASS2_MODEL})[/bold]")
+        console.print("  [bold white][8][/bold white] 🧪 [bold]Load Sample Resume & JD (Quick Demo)[/bold]")
         console.print("  [bold red][0][/bold red] ❌ [bold]Exit[/bold]\n")
 
-        choice = Prompt.ask("Enter option", choices=["0", "1", "2", "3", "4", "5", "6", "7"], default="5" if (resume_file or jd_source) else "1")
+        default_opt = (
+            "7" if (resume_extracted and jd_extracted and not score_result)
+            else ("5" if (resume_file or jd_source) else "1")
+        )
+        choice = Prompt.ask("Enter option", choices=["0", "1", "2", "3", "4", "5", "6", "7", "8"], default=default_opt)
 
         if choice == "1":
             console.print("\n[cyan]Opening file picker dialog to choose Resume...[/cyan]")
@@ -422,6 +618,7 @@ def run_parser_studio():
             if path and Path(path).exists():
                 resume_file = path
                 resume_extracted = None  # Reset cached Pass 1
+                score_result = None
                 console.print(f"[bold green]✔ Resume loaded:[/bold green] {resume_file}")
                 try:
                     resume_parsed = parse_resume(resume_file)
@@ -442,6 +639,7 @@ def run_parser_studio():
             if path and Path(path).exists():
                 jd_source = path
                 jd_extracted = None  # Reset cached Pass 1
+                score_result = None
                 try:
                     jd_parsed = parse_jd(jd_source)
                     console.print(f"[bold blue]✔ JD loaded:[/bold blue] {jd_source}")
@@ -463,6 +661,7 @@ def run_parser_studio():
             if raw_text:
                 jd_source = raw_text
                 jd_extracted = None  # Reset cached Pass 1
+                score_result = None
                 jd_parsed = parse_jd(raw_text)
                 console.print("[bold blue]✔ JD text saved and parsed.[/bold blue]")
             Prompt.ask("\nPress Enter to continue...")
@@ -481,7 +680,7 @@ def run_parser_studio():
             show_parse_results(resume_file, resume_parsed, jd_source, jd_parsed)
             
             # Offer seamless shortcut to run Pass 1
-            if Confirm.ask("\n[bold cyan]Would you like to run Pass 1 Extraction (Gemini 2.0 Flash) now?[/bold cyan]", default=True):
+            if Confirm.ask(f"\n[bold cyan]Would you like to run Pass 1 Extraction ({GEMINI_PASS1_MODEL}) now?[/bold cyan]", default=True):
                 choice = "5"
             else:
                 Prompt.ask("\nPress Enter to return to menu...")
@@ -499,19 +698,19 @@ def run_parser_studio():
             if jd_source and not jd_parsed:
                 jd_parsed = parse_jd(jd_source)
 
-            # Extract Resume with Gemini 2.0 Flash
+            # Extract Resume with Gemini 3.6 Flash
             if resume_parsed and not resume_extracted:
                 try:
-                    with console.status("[bold cyan]Extracting structured Resume fields with Gemini 2.0 Flash...[/bold cyan]", spinner="dots"):
+                    with console.status(f"[bold cyan]Extracting structured Resume fields with {GEMINI_PASS1_MODEL}...[/bold cyan]", spinner="dots"):
                         resume_extracted = extract_resume(resume_parsed, fast=False)
                     console.print("[bold green]✔ Resume extracted & skills normalized![/bold green]")
                 except Exception as e:
                     console.print(f"[bold red]Error in Resume extraction:[/bold red] {e}")
 
-            # Extract JD with Gemini 2.0 Flash + FAISS template normalizer
+            # Extract JD with Gemini 3.6 Flash + FAISS template normalizer
             if jd_parsed and not jd_extracted:
                 try:
-                    with console.status("[bold cyan]Extracting structured JD fields with Gemini 2.0 Flash...[/bold cyan]", spinner="dots"):
+                    with console.status(f"[bold cyan]Extracting structured JD fields with {GEMINI_PASS1_MODEL}...[/bold cyan]", spinner="dots"):
                         jd_extracted = extract_jd(jd_parsed, fast=False)
                         try:
                             jd_extracted["normalized_template"] = normalize_jd(jd_parsed)
@@ -544,16 +743,76 @@ def run_parser_studio():
                         jd_parsed = parse_jd(jd_source)
 
                     if resume_parsed and not resume_extracted:
-                        with console.status("[bold cyan]Extracting Resume with Gemini 2.0 Flash...[/bold cyan]"):
+                        with console.status(f"[bold cyan]Extracting Resume with {GEMINI_PASS1_MODEL}...[/bold cyan]"):
                             resume_extracted = extract_resume(resume_parsed, fast=False)
                     if jd_parsed and not jd_extracted:
-                        with console.status("[bold cyan]Extracting JD with Gemini 2.0 Flash...[/bold cyan]"):
+                        with console.status(f"[bold cyan]Extracting JD with {GEMINI_PASS1_MODEL}...[/bold cyan]"):
                             jd_extracted = extract_jd(jd_parsed, fast=False)
 
             show_pass1_results(resume_extracted, jd_extracted)
+
+            if resume_extracted and jd_extracted:
+                if Confirm.ask(f"\n[bold cyan]Would you like to proceed directly to Pass 2 Scoring ({GEMINI_PASS2_MODEL})?[/bold cyan]", default=True):
+                    choice = "7"
+                else:
+                    Prompt.ask("\nPress Enter to return to menu...")
+                    continue
+            else:
+                Prompt.ask("\nPress Enter to return to menu...")
+
+        if choice == "7":
+            if not resume_file and not resume_extracted:
+                console.print("[bold red]Please upload a Resume first![/bold red]")
+                Prompt.ask("\nPress Enter to continue...")
+                continue
+            if not jd_source and not jd_extracted:
+                console.print("[bold red]Please upload or paste a Job Description first![/bold red]")
+                Prompt.ask("\nPress Enter to continue...")
+                continue
+
+            # Ensure text parsing
+            if resume_file and not resume_parsed:
+                resume_parsed = parse_resume(resume_file)
+            if jd_source and not jd_parsed:
+                jd_parsed = parse_jd(jd_source)
+
+            # Ensure Pass 1 extraction is run
+            if not resume_extracted and resume_parsed:
+                with console.status(f"[bold cyan]Extracting Resume fields with {GEMINI_PASS1_MODEL} (Pass 1)...[/bold cyan]"):
+                    resume_extracted = extract_resume(resume_parsed, fast=False)
+            if not jd_extracted and jd_parsed:
+                with console.status(f"[bold cyan]Extracting JD requirements with {GEMINI_PASS1_MODEL} (Pass 1)...[/bold cyan]"):
+                    jd_extracted = extract_jd(jd_parsed, fast=False)
+                    try:
+                        jd_extracted["normalized_template"] = normalize_jd(jd_parsed)
+                    except Exception:
+                        pass
+
+            if not resume_extracted or not jd_extracted:
+                console.print("[bold red]Pass 1 extraction could not be completed. Cannot run Pass 2 scorer.[/bold red]")
+                Prompt.ask("\nPress Enter to continue...")
+                continue
+
+            # Execute Pass 2: Score + Explain with Gemini 3.5 Flash-Lite
+            console.print("\n")
+            with console.status(f"[bold cyan]🤖 Running Pass 2: Scoring & Evidence Verification ({GEMINI_PASS2_MODEL})...[/bold cyan]", spinner="dots"):
+                score_result = score_with_confidence(
+                    resume_extracted,
+                    jd_extracted,
+                    jd_extracted.get("normalized_template"),
+                    resume_text=resume_parsed,
+                )
+
+            console.print("[bold green]✔ Pass 2 Scoring & Explainability analysis complete![/bold green]")
+            show_pass2_results(score_result, resume_extracted, jd_extracted)
+
+            if Confirm.ask("\n[dim]Would you like to view raw Pass 2 Score JSON?[/dim]", default=False):
+                console.print("\n[bold cyan]=== Pass 2 Score JSON ===[/bold cyan]")
+                console.print(JSON(json.dumps(score_result)))
+
             Prompt.ask("\nPress Enter to return to menu...")
 
-        elif choice == "7":
+        elif choice == "8":
             # Create sample files if they don't exist
             sample_resume_path = Path("data/raw_resumes/sample_resume.txt")
             sample_jd_path = Path("data/raw_jobs/sample_jd.txt")
@@ -598,6 +857,7 @@ def run_parser_studio():
             jd_source = str(sample_jd_path)
             resume_extracted = None
             jd_extracted = None
+            score_result = None
 
             resume_parsed = parse_resume(resume_file)
             jd_parsed = parse_jd(jd_source)
@@ -605,8 +865,8 @@ def run_parser_studio():
             console.print("[bold green]✔ Loaded sample resume and sample JD.[/bold green]")
             show_parse_results(resume_file, resume_parsed, jd_source, jd_parsed)
 
-            if Confirm.ask("\n[bold cyan]Run Pass 1 Extraction (Gemini 2.0 Flash) on sample data now?[/bold cyan]", default=True):
-                with console.status("[bold cyan]Running Pass 1 Extraction with Gemini 2.0 Flash...[/bold cyan]"):
+            if Confirm.ask(f"\n[bold cyan]Run Pass 1 Extraction ({GEMINI_PASS1_MODEL}) on sample data now?[/bold cyan]", default=True):
+                with console.status(f"[bold cyan]Running Pass 1 Extraction with {GEMINI_PASS1_MODEL}...[/bold cyan]"):
                     resume_extracted = extract_resume(resume_parsed, fast=False)
                     jd_extracted = extract_jd(jd_parsed, fast=False)
                     try:
@@ -614,6 +874,16 @@ def run_parser_studio():
                     except Exception:
                         pass
                 show_pass1_results(resume_extracted, jd_extracted)
+
+                if Confirm.ask(f"\n[bold cyan]Run Pass 2 Scoring & Evidence Verification ({GEMINI_PASS2_MODEL}) now?[/bold cyan]", default=True):
+                    with console.status(f"[bold cyan]🤖 Running Pass 2: Scoring & Explaining with {GEMINI_PASS2_MODEL}...[/bold cyan]"):
+                        score_result = score_with_confidence(
+                            resume_extracted,
+                            jd_extracted,
+                            jd_extracted.get("normalized_template"),
+                            resume_text=resume_parsed,
+                        )
+                    show_pass2_results(score_result, resume_extracted, jd_extracted)
 
             Prompt.ask("\nPress Enter to return to menu...")
 
@@ -624,10 +894,11 @@ def run_parser_studio():
 if __name__ == "__main__":
     import argparse
 
-    parser = argparse.ArgumentParser(description="Terminal Resume & JD Parser + Pass 1 Extraction Studio")
+    parser = argparse.ArgumentParser(description="Terminal Resume & JD Parser + Pass 1 & Pass 2 Studio")
     parser.add_argument("--resume", type=str, help="Path to resume file (PDF/DOCX/TXT)")
     parser.add_argument("--jd", type=str, help="Path to JD file or raw text")
-    parser.add_argument("--extract", action="store_true", help="Run Pass 1 structured extraction with Gemini 2.0 Flash")
+    parser.add_argument("--extract", action="store_true", help=f"Run Pass 1 structured extraction with {GEMINI_PASS1_MODEL}")
+    parser.add_argument("--score", action="store_true", help=f"Run Pass 2 candidate scoring & explainability with {GEMINI_PASS2_MODEL}")
     parser.add_argument("--demo", action="store_true", help="Run immediate demo with sample data")
     args = parser.parse_args()
 
@@ -643,7 +914,7 @@ if __name__ == "__main__":
         show_parse_results(str(sample_resume_path), r_text, str(sample_jd_path), j_text)
 
         # Run Pass 1
-        console.print("\n[bold cyan]Running Pass 1 Extraction (Gemini 2.0 Flash)...[/bold cyan]")
+        console.print(f"\n[bold cyan]Running Pass 1 Extraction ({GEMINI_PASS1_MODEL})...[/bold cyan]")
         r_ext = extract_resume(r_text, fast=False)
         j_ext = extract_jd(j_text, fast=False)
         try:
@@ -652,13 +923,21 @@ if __name__ == "__main__":
             pass
         show_pass1_results(r_ext, j_ext)
 
+        # Run Pass 2
+        console.print(f"\n[bold cyan]Running Pass 2 Scoring & Explanation ({GEMINI_PASS2_MODEL})...[/bold cyan]")
+        s_res = score_with_confidence(r_ext, j_ext, j_ext.get("normalized_template"), resume_text=r_text)
+        show_pass2_results(s_res, r_ext, j_ext)
+
     elif args.resume or args.jd:
         display_banner()
         r_text = parse_resume(args.resume) if args.resume else ""
         j_text = parse_jd(args.jd) if args.jd else ""
         show_parse_results(args.resume or "", r_text, args.jd or "", j_text)
 
-        if args.extract:
+        r_ext = None
+        j_ext = None
+
+        if args.extract or args.score:
             r_ext = extract_resume(r_text, fast=False) if r_text else None
             j_ext = extract_jd(j_text, fast=False) if j_text else None
             if j_ext and j_text:
@@ -667,5 +946,9 @@ if __name__ == "__main__":
                 except Exception:
                     pass
             show_pass1_results(r_ext, j_ext)
+
+        if args.score and r_ext and j_ext:
+            s_res = score_with_confidence(r_ext, j_ext, j_ext.get("normalized_template"), resume_text=r_text)
+            show_pass2_results(s_res, r_ext, j_ext)
     else:
         run_parser_studio()
