@@ -83,9 +83,10 @@
     ],
     "go": [
       "golang",
-      "go lang",
-      "goroutines",
-      "go modules"
+      "go programming",
+      "go language",
+      "go backend",
+      "go server"
     ],
     "rust": [
       "rustlang",

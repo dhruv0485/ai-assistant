@@ -141,7 +141,7 @@ def _normalize_skill_list(skills: Any) -> List[str]:
 def extract_resume(resume_text: str, fast: bool = False) -> Dict[str, Any]:
     """
     Pass 1a: Extract structured fields from resume.
-    Uses gemini-3.6-flash primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.1-flash-lite, gemini-3.8-flash).
+    Uses gemini-3.1-flash-lite primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.6-flash, gemini-3.8-flash).
     Normalizes all extracted skills through the technical skill ontology.
     Post-processes to catch commonly missed skills that appear in raw text.
     """
@@ -151,12 +151,33 @@ def extract_resume(resume_text: str, fast: bool = False) -> Dict[str, Any]:
     # Normalize all extracted skills through ontology
     result["skills"] = _normalize_skill_list(result.get("skills", []))
     
+    # After LLM extraction, promote certification-implied skills
+    CERT_TO_SKILL_MAP = {
+        "aws academy": "aws",
+        "aws certified": "aws",
+        "google cloud": "gcp",
+        "azure fundamentals": "azure",
+        "azure certified": "azure",
+        "kubernetes": "kubernetes",
+        "docker certified": "docker",
+    }
+
+    for cert in result.get("certifications", []):
+        cert_lower = str(cert).lower()
+        for cert_keyword, skill in CERT_TO_SKILL_MAP.items():
+            if cert_keyword in cert_lower and skill not in result["skills"]:
+                result["skills"].append(skill)
+
     # Post-extraction validation: scan raw text for important skills LLM might miss
     ALWAYS_CHECK = ['tensorflow', 'web3', 'blockchain', 'react native',
                     'gradient boosting', 'docker', 'git', 'kubernetes',
                     'pytorch', 'razorpay', 'aptos', 'solidity']
     
     resume_lower = resume_text.lower()
+    for cert_keyword, skill in CERT_TO_SKILL_MAP.items():
+        if cert_keyword in resume_lower and skill not in result["skills"]:
+            result["skills"].append(skill)
+
     for skill in ALWAYS_CHECK:
         if skill in resume_lower:
             canonical = normalize_skill(skill)
@@ -168,7 +189,7 @@ def extract_resume(resume_text: str, fast: bool = False) -> Dict[str, Any]:
 def extract_jd(jd_text: str, fast: bool = False) -> Dict[str, Any]:
     """
     Pass 1b: Extract structured fields from job description.
-    Uses gemini-3.6-flash primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.1-flash-lite, gemini-3.8-flash).
+    Uses gemini-3.1-flash-lite primary with demand spike fallbacks (gemini-3.5-flash, gemini-3.6-flash, gemini-3.8-flash).
     Normalizes must-have and nice-to-have skills through the technical skill ontology.
     Hard deduplicates in code to prevent skills appearing in both lists.
     """

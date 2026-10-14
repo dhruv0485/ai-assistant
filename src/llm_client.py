@@ -21,9 +21,9 @@ groq_client = OpenAI(
 def call_pass1_gemini(system: str, user: str) -> str:
     """
     Pass 1 fallback chain for spikes in demand:
-      1. ('gemini', 'gemini-3.6-flash')        # primary — workhorse
+      1. ('gemini', 'gemini-3.1-flash-lite')        # primary — workhorse
       2. ('gemini', 'gemini-3.5-flash')        # fallback 1 — slightly heavier
-      3. ('gemini', 'gemini-3.1-flash-lite')   # fallback 2 — older but reliable
+      3. ('gemini', 'gemini-3.6-flash')   # fallback 2 — older but reliable
       4. ('gemini', 'gemini-3.8-flash')        # fallback 3 — newest, may be busy
     """
     last_error = None
@@ -104,9 +104,9 @@ def call_openai_compatible(client, model: str, system: str, user: str) -> str:
 def call_pass1_llm(system: str, user: str) -> dict:
     """
     Dedicated Pass 1 LLM caller using PASS1_MODELS fallback chain for demand spikes:
-      1. gemini-3.6-flash (primary)
+      1. gemini-3.1-flash-lite (primary)
       2. gemini-3.5-flash (fallback 1)
-      3. gemini-3.1-flash-lite (fallback 2)
+      3. gemini-3.6-flash (fallback 2)
       4. gemini-3.8-flash (fallback 3)
     """
     try:

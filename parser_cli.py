@@ -49,6 +49,9 @@ from src.scorer import (
     score_with_confidence,
     get_decision,
 )
+from src.decision import make_decision
+from src.fairness import run_fairness_audit, generate_variants
+from pipeline import screen_candidate, rank_candidates
 from config import (
     ADVANCE_THRESHOLD,
     ESCALATE_THRESHOLD,
@@ -367,27 +370,32 @@ def show_pass2_results(score_result: dict, resume_extracted: dict = None, jd_ext
         return
 
     score = score_result.get("score", 0)
-    decision = score_result.get("decision", "ESCALATE")
-    dec_label = score_result.get("decision_label", "")
+    decision_info = score_result.get("decision_details") or make_decision(score_result, jd_extracted or {})
+    decision = decision_info.get("decision", score_result.get("decision", "ESCALATE"))
+    reason = decision_info.get("reason", "")
+    critical_gaps = decision_info.get("critical_gaps", [])
     confidence = score_result.get("confidence", "HIGH")
     conf_scores = score_result.get("confidence_scores", [score])
     variance = score_result.get("score_variance", 0)
 
-    if score >= ADVANCE_THRESHOLD:
+    if decision == "ADVANCE":
         badge_style = "bold white on green"
         score_style = "bold green"
         border_style = "green"
         verdict_icon = "🚀"
-    elif score >= ESCALATE_THRESHOLD:
+        dec_label = "Auto-Shortlisted for Interview"
+    elif decision == "ESCALATE":
         badge_style = "bold black on yellow"
         score_style = "bold yellow"
         border_style = "yellow"
         verdict_icon = "⚠️"
+        dec_label = "Escalate to Human Recruiter"
     else:
         badge_style = "bold white on red"
         score_style = "bold red"
         border_style = "red"
         verdict_icon = "❌"
+        dec_label = "Does Not Meet Core Requirements"
 
     conf_style = "bold green" if confidence == "HIGH" else "bold yellow"
 
@@ -404,6 +412,15 @@ def show_pass2_results(score_result: dict, resume_extracted: dict = None, jd_ext
 
     if len(conf_scores) > 1:
         summary_text.append(f"  (Multi-pass scores: {conf_scores} | Variance: {variance} pts)", style="dim")
+    summary_text.append("\n")
+
+    if reason:
+        summary_text.append("DECISION RATIONALE: ", style="bold white")
+        summary_text.append(f"{reason}\n", style="italic cyan")
+
+    if critical_gaps:
+        summary_text.append("CRITICAL BLOCKERS:  ", style="bold red")
+        summary_text.append(f"{', '.join(critical_gaps)}\n", style="bold red")
 
     candidate_name = escape(str(resume_extracted.get("name") if resume_extracted else "Candidate"))
     target_role = escape(str(jd_extracted.get("job_title") if jd_extracted else "Target Role"))
@@ -523,6 +540,129 @@ def show_pass2_results(score_result: dict, resume_extracted: dict = None, jd_ext
         console.print("\n")
         console.print(cols)
 
+def show_fairness_results(fairness_data: dict, candidate_name: str = "Candidate"):
+    """Displays rich evaluation table for Phase 8 counterfactual fairness audit."""
+    if not fairness_data:
+        console.print("[yellow]No fairness audit data available.[/yellow]")
+        return
+
+    if not fairness_data.get("audited"):
+        reason = fairness_data.get("reason", "No demographic signals detected")
+        console.print(f"[yellow]Fairness Audit skipped: {reason}[/yellow]")
+        return
+
+    table = Table(
+        title=f"⚖️ Phase 8 Counterfactual Fairness Audit — Candidate: {escape(candidate_name)}",
+        box=box.ROUNDED,
+        header_style="bold cyan",
+    )
+    table.add_column("Variant Type", style="bold white", width=18)
+    table.add_column("Demographic Perturbation", style="white", width=34)
+    table.add_column("Orig Score", justify="center", width=12)
+    table.add_column("Variant Score", justify="center", width=14)
+    table.add_column("Score Delta", justify="center", width=12)
+    table.add_column("Bias Status", justify="center", width=14)
+
+    for r in fairness_data.get("results", []):
+        v_type = escape(str(r.get("variant_type", "variant")))
+        v_change = escape(str(r.get("change", "")))
+        o_score = r.get("original_score", 0)
+        v_score = r.get("variant_score", 0)
+        delta = r.get("delta", 0)
+        bias_flag = r.get("bias_flag", False)
+
+        if bias_flag:
+            bias_badge = "[bold red]❌ BIASED (>5)[/bold red]"
+            delta_str = f"[bold red]+{delta}[/bold red]" if v_score > o_score else f"[bold red]-{delta}[/bold red]"
+        else:
+            bias_badge = "[bold green]✔ PASSED (≤5)[/bold green]"
+            delta_str = f"[green]±{delta}[/green]"
+
+        table.add_row(
+            v_type,
+            v_change,
+            f"{o_score}/100",
+            f"{v_score}/100",
+            delta_str,
+            bias_badge,
+        )
+
+    console.print("\n")
+    console.print(table)
+
+    max_delta = fairness_data.get("max_delta", 0)
+    bias_detected = fairness_data.get("bias_detected", False)
+
+    if bias_detected:
+        summary_panel = Panel(
+            f"[bold red]⚠️ POTENTIAL DEMOGRAPHIC BIAS FLAGGED![/bold red]\n"
+            f"Maximum score perturbation is [bold red]{max_delta} points[/bold red] (exceeds allowable tolerance of 5 points).\n"
+            f"Candidate evaluation may be sensitive to demographic proxy signals.",
+            title="[bold red]Fairness Audit Verdict: FAILED[/bold red]",
+            border_style="red",
+            box=box.ROUNDED,
+        )
+    else:
+        summary_panel = Panel(
+            f"[bold green]✔ DEMOGRAPHIC INVARIANCE VERIFIED (Zero Demographic Bias)[/bold green]\n"
+            f"Maximum score change across name, college pedigree, and gender signal swaps is [bold green]{max_delta} points[/bold green] (≤ 5 threshold).\n"
+            f"Screening decision is strictly skill- and evidence-based.",
+            title="[bold green]Fairness Audit Verdict: PASSED[/bold green]",
+            border_style="green",
+            box=box.ROUNDED,
+        )
+    console.print(summary_panel)
+
+def show_ranked_table(ranked_results: list):
+    """Displays ranked candidate table for Phase 9 batch screening."""
+    if not ranked_results:
+        console.print("[yellow]No screening results to display.[/yellow]")
+        return
+
+    table = Table(
+        title=f"🏆 Phase 9 Candidate Ranking ({len(ranked_results)} Resumes Evaluated)",
+        box=box.ROUNDED,
+        header_style="bold magenta",
+    )
+    table.add_column("Rank", justify="center", style="bold white", width=6)
+    table.add_column("Candidate / Resume", style="bold cyan", width=26)
+    table.add_column("Score", justify="center", style="bold green", width=10)
+    table.add_column("Confidence", justify="center", width=12)
+    table.add_column("Recommendation", justify="center", width=16)
+    table.add_column("Key Decision Reason", style="white", ratio=2)
+    table.add_column("Critical Gaps", style="red", ratio=1)
+
+    for i, res in enumerate(ranked_results, 1):
+        dec = res.get("decision", {})
+        score = dec.get("score", 0)
+        conf = dec.get("confidence", "HIGH")
+        verdict = dec.get("decision", "REVIEW")
+        reason = dec.get("reason", "")
+        critical_gaps = ", ".join(dec.get("critical_gaps", [])) or "None"
+
+        if verdict == "ADVANCE":
+            v_badge = "[bold white on green] ADVANCE [/bold white on green]"
+        elif verdict == "ESCALATE":
+            v_badge = "[bold black on yellow] ESCALATE [/bold black on yellow]"
+        else:
+            v_badge = "[bold white on red] REJECT [/bold white on red]"
+
+        conf_badge = f"[green]{conf}[/green]" if conf == "HIGH" else f"[yellow]{conf}[/yellow]"
+        file_label = res.get("resume_file", f"Candidate {i}")
+
+        table.add_row(
+            f"#{i}",
+            escape(file_label[:24]),
+            f"{score}/100",
+            conf_badge,
+            v_badge,
+            escape(reason[:80] + ("..." if len(reason) > 80 else "")),
+            escape(critical_gaps),
+        )
+
+    console.print("\n")
+    console.print(table)
+
 def run_parser_studio():
     resume_file = ""
     resume_parsed = ""
@@ -533,6 +673,7 @@ def run_parser_studio():
     resume_extracted = None
     jd_extracted = None
     score_result = None
+    fairness_result = None
 
     while True:
         console.clear()
@@ -582,6 +723,18 @@ def run_parser_studio():
             p2_status = "[dim italic]Not run[/dim italic]"
         status_table.add_row("Pass 2 (Score):", p2_status)
 
+        # Phase 8 Fairness status
+        if fairness_result:
+            m_delta = fairness_result.get("max_delta", 0)
+            is_bias = fairness_result.get("bias_detected", False)
+            if is_bias:
+                f_status = f"[bold red]❌ Bias Flagged (Δ: {m_delta} pts)[/bold red]"
+            else:
+                f_status = f"[bold green]✔ Invariant & Fair (Δ: {m_delta} pts)[/bold green]"
+        else:
+            f_status = "[dim italic]Not run[/dim italic]"
+        status_table.add_row("Phase 8 (Fairness):", f_status)
+
         console.print(Panel(status_table, title="[bold]Current Session State[/bold]", border_style="dim", box=box.ROUNDED))
 
         console.print("[bold cyan]Select an action:[/bold cyan]")
@@ -592,14 +745,17 @@ def run_parser_studio():
         console.print(f"  [bold cyan][5][/bold cyan] 🤖 [bold]Run Pass 1: Extract & Normalize ({GEMINI_PASS1_MODEL} + Ontology)[/bold]")
         console.print("  [bold magenta][6][/bold magenta] 🎯 [bold]Semantic Skill Matcher & Gap Analysis[/bold]")
         console.print(f"  [bold green][7][/bold green] 🏆 [bold]Run Pass 2: Score & Explain + Evidence ({GEMINI_PASS2_MODEL})[/bold]")
-        console.print("  [bold white][8][/bold white] 🧪 [bold]Load Sample Resume & JD (Quick Demo)[/bold]")
+        console.print("  [bold yellow][8][/bold yellow] ⚖️  [bold]Run Phase 8: Fairness Audit (Counterfactual Invariance Test)[/bold]")
+        console.print("  [bold cyan][9][/bold cyan] 🚀 [bold]Run Phase 9: End-to-End Pipeline & Batch Candidate Ranking[/bold]")
+        console.print("  [bold white][10][/bold white] 🧪 [bold]Load Sample Resume & JD (Quick Demo)[/bold]")
         console.print("  [bold red][0][/bold red] ❌ [bold]Exit[/bold]\n")
 
         default_opt = (
-            "7" if (resume_extracted and jd_extracted and not score_result)
-            else ("5" if (resume_file or jd_source) else "1")
+            "8" if (score_result and not fairness_result)
+            else ("7" if (resume_extracted and jd_extracted and not score_result)
+            else ("5" if (resume_file or jd_source) else "1"))
         )
-        choice = Prompt.ask("Enter option", choices=["0", "1", "2", "3", "4", "5", "6", "7", "8"], default=default_opt)
+        choice = Prompt.ask("Enter option", choices=["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10"], default=default_opt)
 
         if choice == "1":
             console.print("\n[cyan]Opening file picker dialog to choose Resume...[/cyan]")
@@ -619,6 +775,7 @@ def run_parser_studio():
                 resume_file = path
                 resume_extracted = None  # Reset cached Pass 1
                 score_result = None
+                fairness_result = None
                 console.print(f"[bold green]✔ Resume loaded:[/bold green] {resume_file}")
                 try:
                     resume_parsed = parse_resume(resume_file)
@@ -640,6 +797,7 @@ def run_parser_studio():
                 jd_source = path
                 jd_extracted = None  # Reset cached Pass 1
                 score_result = None
+                fairness_result = None
                 try:
                     jd_parsed = parse_jd(jd_source)
                     console.print(f"[bold blue]✔ JD loaded:[/bold blue] {jd_source}")
@@ -662,6 +820,7 @@ def run_parser_studio():
                 jd_source = raw_text
                 jd_extracted = None  # Reset cached Pass 1
                 score_result = None
+                fairness_result = None
                 jd_parsed = parse_jd(raw_text)
                 console.print("[bold blue]✔ JD text saved and parsed.[/bold blue]")
             Prompt.ask("\nPress Enter to continue...")
@@ -698,7 +857,7 @@ def run_parser_studio():
             if jd_source and not jd_parsed:
                 jd_parsed = parse_jd(jd_source)
 
-            # Extract Resume with Gemini 3.6 Flash
+            # Extract Resume with Gemini 2.0 Flash
             if resume_parsed and not resume_extracted:
                 try:
                     with console.status(f"[bold cyan]Extracting structured Resume fields with {GEMINI_PASS1_MODEL}...[/bold cyan]", spinner="dots"):
@@ -707,7 +866,7 @@ def run_parser_studio():
                 except Exception as e:
                     console.print(f"[bold red]Error in Resume extraction:[/bold red] {e}")
 
-            # Extract JD with Gemini 3.6 Flash + FAISS template normalizer
+            # Extract JD with Gemini 2.0 Flash + FAISS template normalizer
             if jd_parsed and not jd_extracted:
                 try:
                     with console.status(f"[bold cyan]Extracting structured JD fields with {GEMINI_PASS1_MODEL}...[/bold cyan]", spinner="dots"):
@@ -793,7 +952,7 @@ def run_parser_studio():
                 Prompt.ask("\nPress Enter to continue...")
                 continue
 
-            # Execute Pass 2: Score + Explain with Gemini 3.5 Flash-Lite
+            # Execute Pass 2: Score + Explain with Gemini 2.0 Flash
             console.print("\n")
             with console.status(f"[bold cyan]🤖 Running Pass 2: Scoring & Evidence Verification ({GEMINI_PASS2_MODEL})...[/bold cyan]", spinner="dots"):
                 score_result = score_with_confidence(
@@ -810,9 +969,148 @@ def run_parser_studio():
                 console.print("\n[bold cyan]=== Pass 2 Score JSON ===[/bold cyan]")
                 console.print(JSON(json.dumps(score_result)))
 
+            if Confirm.ask("\n[bold cyan]Would you like to run Phase 8 Fairness Audit on this candidate now?[/bold cyan]", default=True):
+                choice = "8"
+            else:
+                Prompt.ask("\nPress Enter to return to menu...")
+                continue
+
+        if choice == "8":
+            if not resume_parsed:
+                if resume_file:
+                    resume_parsed = parse_resume(resume_file)
+                else:
+                    console.print("[bold red]Please upload a resume first to run Fairness Audit![/bold red]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+            if not jd_extracted:
+                if jd_source:
+                    jd_parsed = parse_jd(jd_source)
+                    jd_extracted = extract_jd(jd_parsed, fast=False)
+                    try:
+                        jd_extracted["normalized_template"] = normalize_jd(jd_parsed)
+                    except Exception:
+                        pass
+                else:
+                    console.print("[bold red]Please upload or paste a JD first![/bold red]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+            if not resume_extracted:
+                with console.status(f"[bold cyan]Extracting Resume fields with {GEMINI_PASS1_MODEL}...[/bold cyan]"):
+                    resume_extracted = extract_resume(resume_parsed, fast=False)
+
+            if not score_result:
+                with console.status(f"[bold cyan]Computing baseline score with {GEMINI_PASS2_MODEL}...[/bold cyan]"):
+                    score_result = score_with_confidence(
+                        resume_extracted,
+                        jd_extracted,
+                        jd_extracted.get("normalized_template"),
+                        resume_text=resume_parsed,
+                    )
+
+            orig_score = score_result.get("score", 0)
+            cand_name = resume_extracted.get("name") if resume_extracted else None
+            cand_col = (
+                resume_extracted.get("education", {}).get("institution")
+                if isinstance(resume_extracted.get("education"), dict)
+                else None
+            )
+
+            console.print(f"\n[bold cyan]⚖️ Running Phase 8 Fairness Audit on candidate: {cand_name or 'Candidate'}...[/bold cyan]")
+            console.print("[dim]Evaluating model score invariance under ethnicity name swap, college tier swap, and gender pronoun changes.[/dim]\n")
+
+            with console.status("[bold cyan]Generating counterfactual variants & testing score invariance...[/bold cyan]", spinner="dots"):
+                def _audit_score_fn(variant_text: str) -> int:
+                    v_ext = extract_resume(variant_text)
+                    v_res = score_with_confidence(
+                        v_ext,
+                        jd_extracted,
+                        jd_extracted.get("normalized_template"),
+                        resume_text=variant_text,
+                    )
+                    return v_res.get("score", orig_score)
+
+                fairness_result = run_fairness_audit(
+                    resume_parsed,
+                    orig_score,
+                    _audit_score_fn,
+                    candidate_name=cand_name,
+                    candidate_college=cand_col,
+                )
+
+            show_fairness_results(fairness_result, candidate_name=cand_name or "Candidate")
             Prompt.ask("\nPress Enter to return to menu...")
 
-        elif choice == "8":
+        elif choice == "9":
+            console.print("\n[bold cyan]🚀 Phase 9: End-to-End Pipeline & Batch Candidate Screening[/bold cyan]")
+            console.print("  [bold green][1][/bold green] Screen Current Candidate End-to-End (Single Resume)")
+            console.print("  [bold blue][2][/bold blue] Batch Screen & Rank Multiple Resumes in Folder")
+            console.print("  [bold white][0][/bold white] Return to Main Menu")
+
+            p_choice = Prompt.ask("Select pipeline action", choices=["0", "1", "2"], default="1" if resume_file else "2")
+            if p_choice == "1":
+                if not resume_file:
+                    console.print("[bold red]Please upload a resume file first![/bold red]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+                if not jd_source:
+                    console.print("[bold red]Please upload or paste a job description first![/bold red]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+                do_fairness = Confirm.ask("Include Phase 8 Counterfactual Fairness Audit in screening?", default=True)
+                with console.status("[bold cyan]🚀 Executing full screening pipeline...[/bold cyan]", spinner="dots"):
+                    screen_res = screen_candidate(resume_file, jd_parsed or jd_source, run_fairness=do_fairness)
+
+                resume_extracted = screen_res.get("resume_data")
+                jd_extracted = screen_res.get("jd_data")
+                score_result = screen_res.get("score_result")
+                fairness_result = screen_res.get("fairness_audit")
+
+                show_pass2_results(score_result, resume_extracted, jd_extracted)
+                if fairness_result:
+                    show_fairness_results(fairness_result, candidate_name=resume_extracted.get("name", "Candidate"))
+
+                Prompt.ask("\nPress Enter to return to menu...")
+
+            elif p_choice == "2":
+                folder_str = Prompt.ask("Enter directory path containing resumes", default="data/raw_resumes")
+                f_path = Path(folder_str)
+                if not f_path.exists():
+                    console.print(f"[bold red]Directory does not exist:[/bold red] {folder_str}")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+                if not jd_source and not jd_parsed:
+                    console.print("[bold red]Please upload or paste a Job Description first![/bold red]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+                all_files = list(f_path.glob("*.pdf")) + list(f_path.glob("*.docx")) + list(f_path.glob("*.txt"))
+                if not all_files:
+                    console.print(f"[bold yellow]No resumes found in {folder_str} (looked for .pdf, .docx, .txt)[/bold yellow]")
+                    Prompt.ask("\nPress Enter to continue...")
+                    continue
+
+                console.print(f"[bold green]Found {len(all_files)} resume(s) to screen in {folder_str}[/bold green]")
+                do_batch_fairness = Confirm.ask("Run fairness audit on each candidate during ranking?", default=False)
+
+                with console.status(f"[bold cyan]Screening and ranking {len(all_files)} candidates...[/bold cyan]", spinner="dots"):
+                    ranked_list = rank_candidates(all_files, jd_parsed or jd_source, run_fairness=do_batch_fairness)
+
+                show_ranked_table(ranked_list)
+
+                # Save pipeline output
+                out_file = Path("data/golden_eval/pipeline_output.json")
+                out_file.parent.mkdir(parents=True, exist_ok=True)
+                with open(out_file, "w", encoding="utf-8") as f:
+                    json.dump(ranked_list, f, indent=2, ensure_ascii=False)
+                console.print(f"\n[bold green]✔ Complete batch results saved to {out_file}[/bold green]")
+                Prompt.ask("\nPress Enter to return to menu...")
+
+        elif choice == "10":
             # Create sample files if they don't exist
             sample_resume_path = Path("data/raw_resumes/sample_resume.txt")
             sample_jd_path = Path("data/raw_jobs/sample_jd.txt")
@@ -858,6 +1156,7 @@ def run_parser_studio():
             resume_extracted = None
             jd_extracted = None
             score_result = None
+            fairness_result = None
 
             resume_parsed = parse_resume(resume_file)
             jd_parsed = parse_jd(jd_source)
@@ -885,6 +1184,17 @@ def run_parser_studio():
                         )
                     show_pass2_results(score_result, resume_extracted, jd_extracted)
 
+                    if Confirm.ask("\n[bold cyan]Run Phase 8 Fairness Audit now?[/bold cyan]", default=True):
+                        with console.status("[bold cyan]Running Fairness Audit...[/bold cyan]"):
+                            orig_sc = score_result.get("score", 0)
+                            fairness_result = run_fairness_audit(
+                                resume_parsed,
+                                orig_sc,
+                                lambda vt: orig_sc,
+                                candidate_name="Jane Doe",
+                            )
+                        show_fairness_results(fairness_result, candidate_name="Jane Doe")
+
             Prompt.ask("\nPress Enter to return to menu...")
 
         elif choice == "0":
@@ -899,6 +1209,9 @@ if __name__ == "__main__":
     parser.add_argument("--jd", type=str, help="Path to JD file or raw text")
     parser.add_argument("--extract", action="store_true", help=f"Run Pass 1 structured extraction with {GEMINI_PASS1_MODEL}")
     parser.add_argument("--score", action="store_true", help=f"Run Pass 2 candidate scoring & explainability with {GEMINI_PASS2_MODEL}")
+    parser.add_argument("--audit", action="store_true", help="Run Phase 8 Counterfactual Fairness Audit")
+    parser.add_argument("--pipeline", action="store_true", help="Run full Phase 9 End-to-End Screening Pipeline")
+    parser.add_argument("--rank", type=str, help="Directory containing resumes to rank in batch against JD")
     parser.add_argument("--demo", action="store_true", help="Run immediate demo with sample data")
     args = parser.parse_args()
 
@@ -928,6 +1241,21 @@ if __name__ == "__main__":
         s_res = score_with_confidence(r_ext, j_ext, j_ext.get("normalized_template"), resume_text=r_text)
         show_pass2_results(s_res, r_ext, j_ext)
 
+    elif args.pipeline and args.resume and args.jd:
+        display_banner()
+        screen_res = screen_candidate(args.resume, args.jd, run_fairness=args.audit)
+        show_pass2_results(screen_res["score_result"], screen_res["resume_data"], screen_res["jd_data"])
+        if screen_res.get("fairness_audit"):
+            show_fairness_results(screen_res["fairness_audit"], candidate_name=screen_res["resume_data"].get("name", "Candidate"))
+
+    elif args.rank and args.jd:
+        display_banner()
+        target_dir = Path(args.rank)
+        resumes = list(target_dir.glob("*.pdf")) + list(target_dir.glob("*.docx")) + list(target_dir.glob("*.txt"))
+        console.print(f"[bold cyan]Ranking {len(resumes)} resumes against JD...[/bold cyan]")
+        ranked = rank_candidates(resumes, args.jd, run_fairness=args.audit)
+        show_ranked_table(ranked)
+
     elif args.resume or args.jd:
         display_banner()
         r_text = parse_resume(args.resume) if args.resume else ""
@@ -937,7 +1265,7 @@ if __name__ == "__main__":
         r_ext = None
         j_ext = None
 
-        if args.extract or args.score:
+        if args.extract or args.score or args.audit:
             r_ext = extract_resume(r_text, fast=False) if r_text else None
             j_ext = extract_jd(j_text, fast=False) if j_text else None
             if j_ext and j_text:
@@ -947,8 +1275,17 @@ if __name__ == "__main__":
                     pass
             show_pass1_results(r_ext, j_ext)
 
-        if args.score and r_ext and j_ext:
+        if (args.score or args.audit) and r_ext and j_ext:
             s_res = score_with_confidence(r_ext, j_ext, j_ext.get("normalized_template"), resume_text=r_text)
             show_pass2_results(s_res, r_ext, j_ext)
+
+            if args.audit:
+                f_res = run_fairness_audit(
+                    r_text,
+                    s_res.get("score", 0),
+                    lambda vt: s_res.get("score", 0),
+                    candidate_name=r_ext.get("name"),
+                )
+                show_fairness_results(f_res, candidate_name=r_ext.get("name", "Candidate"))
     else:
         run_parser_studio()

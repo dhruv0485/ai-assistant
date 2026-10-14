@@ -363,9 +363,12 @@ def match_skills(jd_skills: List[str], resume_skills: List[str], threshold: floa
                 score = 0.95
             # Rule 4: Substring / compound containment
             # e.g. "rest apis" in "razorpay rest apis"
+            # Require minimum length of 4 or whole word boundary to prevent false substring matches (e.g. "go" in "mongodb")
             elif (
-                jd_canon_lower in res_skill_lower
+                (len(jd_canon_lower) >= 4 and jd_canon_lower in res_skill_lower)
                 or (len(jd_clean_lower) >= 4 and jd_clean_lower in res_skill_lower)
+                or bool(re.search(r'\b' + re.escape(jd_canon_lower) + r'\b', res_skill_lower))
+                or bool(re.search(r'\b' + re.escape(jd_clean_lower) + r'\b', res_skill_lower))
             ):
                 score = 0.95
             else:

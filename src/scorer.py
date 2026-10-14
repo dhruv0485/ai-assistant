@@ -11,6 +11,7 @@ if str(_PROJECT_ROOT) not in sys.path:
 
 from src.llm_client import call_llm
 from src.skill_ontology import match_skills
+from src.decision import make_decision
 from config import (
     BORDERLINE_LOW,
     BORDERLINE_HIGH,
@@ -139,10 +140,14 @@ def score_candidate(resume_extracted: dict, jd_extracted: dict,
         score_val = 50
     result["score"] = score_val
 
-    # Attach decision metadata
-    dec = get_decision(score_val)
-    result["decision"] = dec["decision"]
-    result["decision_label"] = dec["label"]
+    # Attach Phase 7 Decision Engine evaluation
+    dec_meta = get_decision(score_val)
+    dec_policy = make_decision(result, jd_extracted)
+    result["decision"] = dec_policy["decision"]
+    result["decision_label"] = dec_meta["label"]
+    result["decision_reason"] = dec_policy["reason"]
+    result["critical_gaps"] = dec_policy.get("critical_gaps", [])
+    result["decision_details"] = dec_policy
 
     return result
 
@@ -163,6 +168,11 @@ def score_with_confidence(resume_extracted: dict, jd_extracted: dict,
         first_result["confidence"] = "HIGH"
         first_result["confidence_scores"] = [score]
         first_result["score_variance"] = 0
+        dec_policy = make_decision(first_result, jd_extracted)
+        first_result["decision"] = dec_policy["decision"]
+        first_result["decision_reason"] = dec_policy["reason"]
+        first_result["critical_gaps"] = dec_policy.get("critical_gaps", [])
+        first_result["decision_details"] = dec_policy
         return first_result
 
     # Borderline — run CONFIDENCE_RUNS times
@@ -182,9 +192,13 @@ def score_with_confidence(resume_extracted: dict, jd_extracted: dict,
     first_result["confidence_scores"] = all_scores
     first_result["score_variance"] = variance
 
-    # Update decision based on final average score
-    dec = get_decision(avg_score)
-    first_result["decision"] = dec["decision"]
-    first_result["decision_label"] = dec["label"]
+    # Update decision using Phase 7 Decision Engine based on final average score & calibrated confidence
+    dec_meta = get_decision(avg_score)
+    dec_policy = make_decision(first_result, jd_extracted)
+    first_result["decision"] = dec_policy["decision"]
+    first_result["decision_label"] = dec_meta["label"]
+    first_result["decision_reason"] = dec_policy["reason"]
+    first_result["critical_gaps"] = dec_policy.get("critical_gaps", [])
+    first_result["decision_details"] = dec_policy
 
     return first_result

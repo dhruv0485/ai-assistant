@@ -12,14 +12,14 @@ GROQ_API_KEY      = os.getenv("GROQ_API_KEY")
 
 # Pass 1 model fallback chain for demand spikes
 PASS1_MODELS = [
-    ("gemini", "gemini-3.6-flash"),        # primary — workhorse
+    ("gemini", "gemini-3.1-flash-lite"),        # primary — workhorse
     ("gemini", "gemini-3.5-flash"),        # fallback 1 — slightly heavier
-    ("gemini", "gemini-3.1-flash-lite"),   # fallback 2 — older but reliable
+    ("gemini", "gemini-3.6-flash"),   # fallback 2 — older but reliable
     ("gemini", "gemini-3.8-flash"),        # fallback 3 — newest, may be busy
 ]
 
 GEMINI_PASS1_MODEL = PASS1_MODELS[0][1]        # primary Pass 1: gemini-3.6-flash
-GEMINI_PASS2_MODEL = "gemini-3.5-flash-lite"   # Pass 2: Scoring, Explainability & Evidence
+GEMINI_PASS2_MODEL = "gemini-3.1-flash-lite"   # Pass 2: Scoring, Explainability & Evidence
 GEMINI_MODEL       = GEMINI_PASS1_MODEL        # Default / base Gemini model
 OPENROUTER_MODEL  = "meta-llama/llama-3.3-70b-instruct:free"
 GROQ_MODEL        = "openai/gpt-oss-20b"
