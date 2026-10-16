@@ -1,0 +1,235 @@
+[
+  {
+    "resume_file": "sample_resume.txt",
+    "resume_path": "data\\raw_resumes\\sample_resume.txt",
+    "resume_data": {
+      "name": "Jane Doe",
+      "skills": [
+        "python",
+        "fastapi",
+        "machine learning",
+        "pytorch",
+        "langchain",
+        "transformers",
+        "docker",
+        "sql",
+        "version control tools"
+      ],
+      "years_experience": 6,
+      "education": {
+        "degree": null,
+        "field": null,
+        "institution": null,
+        "year": null
+      },
+      "past_roles": [
+        {
+          "title": "Lead AI Engineer",
+          "company": "DataScale Corp",
+          "duration_years": 3.0
+        },
+        {
+          "title": "Backend Developer",
+          "company": "CloudSoft",
+          "duration_years": 3.0
+        }
+      ],
+      "location": "Bangalore, India",
+      "certifications": [],
+      "languages": [
+        "Python"
+      ],
+      "experience_ambiguity": false
+    },
+    "jd_data": {
+      "job_title": "Backend Software Engineer",
+      "company": null,
+      "must_have_skills": [
+        "python",
+        "restful apis",
+        "postgresql",
+        "version control tools"
+      ],
+      "nice_to_have_skills": [
+        "docker",
+        "aws",
+        "fastapi"
+      ],
+      "min_years_experience": 2,
+      "education_required": null,
+      "location": "Bangalore, India",
+      "responsibilities": [],
+      "domain": null,
+      "normalized_template": {
+        "matched_role": "backend_swe",
+        "similarity": 0.748,
+        "canonical_musts": [
+          "python or java",
+          "REST APIs",
+          "SQL database",
+          "git"
+        ],
+        "canonical_nices": [
+          "docker",
+          "AWS",
+          "microservices",
+          "CI/CD"
+        ],
+        "min_years": 2
+      }
+    },
+    "jd_normalized": {
+      "matched_role": "backend_swe",
+      "similarity": 0.748,
+      "canonical_musts": [
+        "python or java",
+        "REST APIs",
+        "SQL database",
+        "git"
+      ],
+      "canonical_nices": [
+        "docker",
+        "AWS",
+        "microservices",
+        "CI/CD"
+      ],
+      "min_years": 2
+    },
+    "score_result": {
+      "score": 90,
+      "must_have_met": [
+        {
+          "skill": "python",
+          "evidence": "Senior Software Engineer with 6+ years of experience in Python, FastAPI, and Machine Learning.",
+          "met": true
+        },
+        {
+          "skill": "restful apis",
+          "evidence": "Senior Software Engineer with 6+ years of experience in Python, FastAPI, and Machine Learning.",
+          "met": true
+        },
+        {
+          "skill": "postgresql",
+          "evidence": "Designed microservices in Python, Docker, PostgreSQL.",
+          "met": true
+        },
+        {
+          "skill": "version control tools",
+          "evidence": "Python, PyTorch, LangChain, Transformers, Docker, SQL, Git",
+          "met": true
+        }
+      ],
+      "nice_to_have_met": [
+        {
+          "skill": "docker",
+          "evidence": "Designed microservices in Python, Docker, PostgreSQL.",
+          "met": true
+        },
+        {
+          "skill": "aws",
+          "evidence": null,
+          "met": false
+        },
+        {
+          "skill": "fastapi",
+          "evidence": "Senior Software Engineer with 6+ years of experience in Python, FastAPI, and Machine Learning.",
+          "met": true
+        }
+      ],
+      "experience_fit": {
+        "required_years": 2,
+        "candidate_years": 6,
+        "note": "Candidate exceeds the minimum experience requirement by 4 years."
+      },
+      "education_fit": "unknown",
+      "gaps": [
+        "aws"
+      ],
+      "strengths": [
+        "Strong backend engineering background with 6 years of experience.",
+        "Proven experience building microservices using FastAPI and PostgreSQL.",
+        "Experience in AI/ML engineering which adds versatility to the backend role."
+      ],
+      "overall_explanation": "Jane Doe is an excellent match for the Backend Software Engineer role, meeting all must-have technical requirements, including experience with PostgreSQL which was verified in her project history. She possesses 6 years of experience, significantly exceeding the 2-year threshold, and has the desired nice-to-have skills in FastAPI and Docker.",
+      "skill_match_detail": {
+        "matches": [
+          {
+            "jd_skill": "python",
+            "jd_canonical": "python",
+            "resume_match": "python",
+            "similarity": 1.0,
+            "matched": true
+          },
+          {
+            "jd_skill": "restful apis",
+            "jd_canonical": "restful apis",
+            "resume_match": "fastapi",
+            "similarity": 0.95,
+            "matched": true
+          },
+          {
+            "jd_skill": "version control tools",
+            "jd_canonical": "version control tools",
+            "resume_match": "version control tools",
+            "similarity": 1.0,
+            "matched": true
+          },
+          {
+            "jd_skill": "docker",
+            "jd_canonical": "docker",
+            "resume_match": "docker",
+            "similarity": 1.0,
+            "matched": true
+          },
+          {
+            "jd_skill": "fastapi",
+            "jd_canonical": "fastapi",
+            "resume_match": "fastapi",
+            "similarity": 1.0,
+            "matched": true
+          }
+        ],
+        "gaps": [
+          {
+            "jd_skill": "postgresql",
+            "jd_canonical": "postgresql",
+            "resume_match": "sql",
+            "similarity": 0.509,
+            "matched": false
+          },
+          {
+            "jd_skill": "aws",
+            "jd_canonical": "aws",
+            "resume_match": "docker",
+            "similarity": 0.359,
+            "matched": false
+          }
+        ],
+        "match_rate": 0.714
+      },
+      "decision": "ADVANCE",
+      "decision_label": "Shortlisted for Interview",
+      "decision_reason": "Strong match (score 90). Strong backend engineering background with 6 years of experience.",
+      "critical_gaps": [],
+      "decision_details": {
+        "decision": "ADVANCE",
+        "reason": "Strong match (score 90). Strong backend engineering background with 6 years of experience.",
+        "score": 90,
+        "confidence": "HIGH",
+        "critical_gaps": []
+      },
+      "confidence": "HIGH",
+      "confidence_scores": [
+        90
+      ],
+      "score_variance": 0
+    },
+    "decision": {
+      "decision": "ADVANCE",
+      "reason": "Strong match (score 90). Strong backend engineering background with 6 years of experience.",
+      "score": 90,
+      "confidence": "HIGH",
+      "critical_gaps": []
+    }
+  }
+]
