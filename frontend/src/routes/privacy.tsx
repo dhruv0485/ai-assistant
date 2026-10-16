@@ -1,0 +1,4 @@
+import {createFileRoute} from '@tanstack/react-router';
+import {pageHead} from '@/lib/tribe-data';
+export const Route=createFileRoute('/privacy')({head:()=>pageHead('Privacy','How your resume and application information is handled.'),component:Page});
+function Page(){return <main className="container page-main form-narrow"><h1 className="page-title">Privacy</h1><p className="page-subtitle">How your resume and application information is handled.</p><div className="jd-content"><p>Your resume and contact information are used to compare your qualifications with a role and support the application review process. In this preview, uploaded documents and applications remain in the current session and are cleared when the page is refreshed. Do not upload sensitive personal information. A production privacy policy will be supplied by the placement drive organizer before launch.</p></div></main>}
