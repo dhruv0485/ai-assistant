@@ -247,6 +247,11 @@ export function pageHead(title: string, description: string, image?: string) {
           ]
         : []),
     ],
+    links: [
+      { rel: 'icon', href: '/brand-icon.png', type: 'image/png' },
+      { rel: 'shortcut icon', href: '/brand-icon.png', type: 'image/png' },
+      { rel: 'apple-touch-icon', href: '/brand-icon.png' },
+    ],
   };
 }
 

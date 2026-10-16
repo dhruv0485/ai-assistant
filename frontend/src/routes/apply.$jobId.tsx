@@ -22,7 +22,7 @@ import { supabase } from '@/lib/supabase';
 export const Route = createFileRoute('/apply/$jobId')({
   head: () =>
     pageHead(
-      'Review & Submit Application',
+      'Job Portal - AI Screening Assistant',
       'Review pre-filled candidate profile details, attach referral code, and submit for AI screening.'
     ),
   component: Apply,
@@ -204,6 +204,16 @@ function Apply() {
     return (
       <main className="container page-main form-narrow">
         <div className="confirmation-header">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <img
+              src="/brand-icon.png"
+              alt="Job Portal"
+              className="w-6 h-6 rounded-full object-contain bg-white p-0.5 border border-border shadow-xs"
+            />
+            <span className="text-xs font-mono font-medium tracking-wider uppercase text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full">
+              Job Portal
+            </span>
+          </div>
           <div className="confirmation-icon">
             <CheckCheck />
           </div>
@@ -245,6 +255,16 @@ function Apply() {
         <ArrowLeft />
         Back to Job Description
       </Link>
+      <div className="flex items-center gap-2 mt-3 mb-1">
+        <img
+          src="/brand-icon.png"
+          alt="Job Portal"
+          className="w-5 h-5 rounded-full object-contain bg-white p-0.5 border border-border shadow-xs"
+        />
+        <span className="text-xs font-mono font-medium tracking-wider uppercase text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full">
+          Job Portal
+        </span>
+      </div>
       <h1 className="page-title">Apply for {job.title}</h1>
       <p className="page-subtitle">
         Review your profile details below. Edit any field, attach an optional referral code, and

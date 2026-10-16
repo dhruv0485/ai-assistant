@@ -55,6 +55,16 @@ export function HrShell({
   return (
     <div className="hr-layout">
       <aside className="hr-sidebar">
+        <Link to="/" className="flex items-center gap-2 mb-4 px-1 group">
+          <img
+            src="/brand-icon.png"
+            alt="Hunt Your Tribe"
+            className="w-6 h-6 rounded-full object-contain bg-white p-0.5 border border-border shadow-xs"
+          />
+          <span className="font-medium text-xs tracking-tight group-hover:text-primary transition-colors">
+            Hunt Your Tribe
+          </span>
+        </Link>
         <div className="sidebar-label micro">HR WORKSPACE</div>
         <nav aria-label="HR navigation">
           {nav.map((n) => (

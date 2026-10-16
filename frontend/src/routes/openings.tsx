@@ -60,6 +60,16 @@ function Openings() {
     <main className="container page-main page-narrow">
       <div className="page-banner">
         <img src={photos[11]} alt="A bright office desk ready for work" />
+        <div className="flex items-center gap-2 mb-2 relative z-10">
+          <img
+            src="/brand-icon.png"
+            alt="Job Portal"
+            className="w-5 h-5 rounded-full object-contain bg-white p-0.5 border border-border shadow-xs"
+          />
+          <span className="text-xs font-mono font-medium tracking-wider uppercase text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full">
+            Job Portal
+          </span>
+        </div>
         <h1>Open Positions</h1>
         <p>Verified roles published by the hiring team currently accepting applications.</p>
       </div>

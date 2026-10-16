@@ -18,10 +18,17 @@ import { useTribe } from '@/lib/tribe-store';
 
 export function Brand() {
   return (
-    <Link to="/" className="brand">
-      <Shield aria-hidden="true" />
-      <span>
+    <Link to="/" className="brand flex items-center gap-2.5">
+      <img
+        src="/brand-icon.png"
+        alt="Hunt Your Tribe Logo"
+        className="brand-logo"
+      />
+      <span className="font-medium text-base tracking-tight">
         Hunt Your Tribe<span className="text-primary">.</span>
+      </span>
+      <span className="hidden sm:inline-flex items-center text-[10px] font-mono uppercase tracking-wider text-primary bg-primary/10 border border-primary/25 px-2 py-0.5 rounded-full font-semibold">
+        Job Portal
       </span>
     </Link>
   );
@@ -236,8 +243,7 @@ export function Footer() {
               loading="lazy"
             />
             <p>
-              A clearer path from your resume to the right opportunity. Built for the
-              placement drive.
+              A clearer path from your resume to the right opportunity with evidence-grounded screening.
             </p>
           </div>
         </div>
@@ -263,7 +269,7 @@ export function Footer() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2026 Hunt Your Tribe. Built for the placement drive.</span>
+        <span>© 2026 Hunt Your Tribe. All rights reserved.</span>
         <span className="flex items-center gap-1.5">
           <ShieldCheck size={12} />
           Made in India

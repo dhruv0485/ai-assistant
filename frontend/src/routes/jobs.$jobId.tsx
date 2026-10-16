@@ -53,6 +53,16 @@ function JobDetail() {
         <ArrowLeft size={16} />
         Back to Openings
       </Link>
+      <div className="flex items-center gap-2 mt-2 mb-1">
+        <img
+          src="/brand-icon.png"
+          alt="Job Portal"
+          className="w-5 h-5 rounded-full object-contain bg-white p-0.5 border border-border shadow-xs"
+        />
+        <span className="text-xs font-mono font-medium tracking-wider uppercase text-primary bg-primary/10 border border-primary/20 px-2.5 py-0.5 rounded-full">
+          Job Portal
+        </span>
+      </div>
       <div className="flex items-center gap-3 flex-wrap">
         <h1 className="page-title">{job.title}</h1>
         {hasApplied && (
