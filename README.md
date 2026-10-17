@@ -136,11 +136,3 @@ The platform is designed around an evidence-grounded, two-pass decoupled archite
 - `data/skill_ontology/jd_templates.json`: **130 standardized role templates** across 14 technical domains synthesized using **Lovable**.
 - `data/skill_ontology/skills.json`: **38 technical categories**, **631 canonical concepts (340+ core engineering skills)**, and **6,796 aliases** curated using **Lovable**.
 
----
-
-## 📂 Deliverables Index
-- [Deliverable 2: Golden Evaluation Set Documentation](file:///c:/Users/Dhruv/Desktop/ai_screen/hyt_screening/backend/eval/GOLDEN_DATASET_NOTE.md)
-- [Deliverable 3: Evaluation Harness & Metrics Report](file:///c:/Users/Dhruv/Desktop/ai_screen/hyt_screening/backend/eval/EVALUATION_HARNESS.md)
-- [Deliverable 4: Evaluation Benchmark Report (Markdown)](file:///c:/Users/Dhruv/Desktop/ai_screen/hyt_screening/backend/eval/EVAL_REPORT.md)
-- [Deliverable 5: Architectural Decision Log](file:///c:/Users/Dhruv/Desktop/ai_screen/hyt_screening/backend/eval/DECISION_LOG.md)
-- [Official 6-Page Technical Report (LaTeX)](file:///c:/Users/Dhruv/Desktop/ai_screen/AI_Screening_Assistant_Report.tex)
