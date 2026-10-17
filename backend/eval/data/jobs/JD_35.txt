@@ -1,0 +1,16 @@
+Title: Cloud Engineer
+Company: Harvey Nash
+Location: United States
+
+Req# 141953 - 1 
+Role: System Engineer 3Location: RemoteDuration: 12 Months with a chance of extension.
+Client: Microsoft 
+Hourly Pay Rate: $65/hr. on W2
+Summary:The main function of a Systems Engineer is to perform a wide variety of installation, configuration, and upgrading of servers and related hardware and software in a LAN, WAN, and stand-alone environment, providing investigation, diagnostic testing, and repair/resolution of system, hardware, software, and infrastructure.
+Job Responsibilities:configuration, installation, and support of equipment to the specifications of the businesssoftware applications and operating systems through regular maintenanceconfiguration and support documentationassigned projects and program components to deliver services by established objectivesthe administration of systems and servers to ensure the availability of services to authorized usersmulti-site network operations, software applications, and operating systems through regular maintenancemalfunctions of hardware, software applications, and security systems to resolve operational issues and restore services.
+Qualification:overall years of experience in the field.ideal resume would contain someone who can execute the commands needed.degree in a technical field such as computer science, computer engineering, or related field required.
+Purpose of the Team: The purpose of this team is to manage and support critical environment platforms and tooling software programs/applications. Support data centers through central applications. This will be a tier-3 role – expect to run into database commands, scripting, and execution resources to manage their critical platform maintenance application.
+Key projects: This role will contribute to operational (80%) and development (20%). CMNS is the main support they control.
+Typical Day in the Role: The role will consist of 10% meetings, 40% heads down, and the remaining 50% teamwork (tier-2 team, other resources, learning, and doing).
+What makes this role interesting? This role provides the opportunity to support global data centers, scaling un-seen paces, cutting-edge in how they manage it and what they are doing, great team culture, learning, and development. Have a really fun team dynamic and organizational culture.
+Top 3 Hard Skills Required:knowledge of IT Systems engineering (5+ YOE)with system capacity and planning, as well as functional configuration and audit (5+ YOE).with system planning and capacity tools and analyses (5+ YOE).

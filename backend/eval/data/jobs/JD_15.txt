@@ -1,0 +1,5 @@
+Title: Machine Learning Engineer
+Company: NLB Services
+Location: Dallas, TX
+
+Job Title: Python AI/ MLType: FulltimeLocation: Dallas, TX Python/AI-ML:Hands on experience with Python, Streamlit, Fastapi (minimum 2+ max 6 years)Hands on experience in developing neural networks using Tensorflow or Pytorch frameworkHands on experience with NLP (NLTK, Spacy, BERT, SBERT models)Hands on experience with vector database (Milvus, FAISS, Pinecone, Vespa, Chroma etc.,)Good understanding on LLMs, Gen AI, Langchain, transformersExperience working and deploying in cloud environment will be added advantage (Google Cloud, AWS, Azure)Willing to learn and adapt to the advancements in the Gen AI technology and work on POCs

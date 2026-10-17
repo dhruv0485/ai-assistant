@@ -1,0 +1,230 @@
+{
+  "JD_17": {
+    "title": "Senior Software Engineer",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Back-end web development",
+      "Programming",
+      "Object-oriented programming (OOP)",
+      "Frontend development",
+      "Software development best practices",
+      "Problem-solving",
+      "Communication"
+    ],
+    "nice_to_have_skills": [
+      "Agile development methodologies"
+    ],
+    "education_requirements": "Bachelor's or Master's degree in Computer Science or related field",
+    "location": "Remote"
+  },
+  "JD_23": {
+    "title": "Senior Data Engineer",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Data Engineering",
+      "Data Modeling",
+      "ETL",
+      "Data Warehousing",
+      "Data Analytics",
+      "SQL",
+      "Python",
+      "Java"
+    ],
+    "nice_to_have_skills": [
+      "AWS",
+      "Azure",
+      "Hadoop",
+      "Spark"
+    ],
+    "education_requirements": "Bachelor's degree in Computer Science, Information Systems, or a related field",
+    "location": "Philadelphia, PA"
+  },
+  "JD_37": {
+    "title": "Robotics Software Engineer - Perception",
+    "min_years_experience": 2,
+    "must_have_skills": [
+      "ROS/ROS2",
+      "Linux",
+      "C++",
+      "Python",
+      "PyTorch",
+      "OpenCV"
+    ],
+    "nice_to_have_skills": [
+      "Startup experience",
+      "RealSense depth cameras",
+      "Velodyne lidars",
+      "SLAM",
+      "Sensor fusion",
+      "Computer vision",
+      "Machine learning",
+      "Point cloud processing"
+    ],
+    "education_requirements": "M.S. or higher in Robotics, Computer Vision, or a related field",
+    "location": "Sunnyvale, CA"
+  },
+  "JD_29": {
+    "title": "IT Systems Engineer",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Cloud Infrastructure",
+      "Azure",
+      "Virtual Machines",
+      "Containerization",
+      "PowerShell",
+      "Linux Shell",
+      "Python",
+      "IT Systems Management",
+      "Security",
+      "Networking",
+      "TCP/IP",
+      "DNS",
+      "DHCP",
+      "Firewalls",
+      "Routers",
+      "Switches"
+    ],
+    "nice_to_have_skills": [
+      "AWS",
+      "GCP",
+      "MSP Environment Experience"
+    ],
+    "education_requirements": "Degree in IT related field",
+    "location": "Oakland, CA"
+  },
+  "JD_47": {
+    "title": "Senior Data Engineer",
+    "min_years_experience": 5,
+    "must_have_skills": [
+      "SQL",
+      "Python",
+      "Data Pipelines",
+      "Azure DevOps",
+      "Code Versioning",
+      "Agile",
+      "Structured Data",
+      "Semi-structured Data",
+      "Unstructured Data"
+    ],
+    "nice_to_have_skills": [
+      "Spark",
+      "Streamlit",
+      "Flask",
+      "Django",
+      "Dash",
+      "Geospatial Data",
+      "Image Data",
+      "Financial Risk Modeling"
+    ],
+    "education_requirements": "Degree in Computer Science or related field",
+    "location": "Remote"
+  },
+  "JD_07": {
+    "title": "Java Backend Developer",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Java",
+      "J2EE",
+      "Java Collections",
+      "Concurrency APIs",
+      "Functional Programming",
+      "Data Structures and Algorithms",
+      "REST APIs",
+      "Spring Framework",
+      "Relational Databases",
+      "NoSQL Databases"
+    ],
+    "nice_to_have_skills": [
+      "React"
+    ],
+    "education_requirements": null,
+    "location": "USA"
+  },
+  "JD_14": {
+    "title": "DevOps Engineer",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Azure DevOps",
+      "Kubernetes",
+      "Helm",
+      "Node.JS",
+      "Angular",
+      "JavaScript",
+      "Microsoft Azure",
+      "Docker",
+      "PowerShell",
+      "GIT",
+      "Linux",
+      "Shell",
+      "Azure Resource Management (ARM) templates",
+      "Maven",
+      "npm",
+      "NuGet",
+      "ANT"
+    ],
+    "nice_to_have_skills": [
+      "Microsoft Dynamics",
+      "Tanzu Application Service (TAS)",
+      "Pivotal Cloud Foundry (PCF)",
+      "Tanzu Kubernetes",
+      "Backbase",
+      "Java",
+      "Spring Framework",
+      "Spring MVC",
+      "Spring Batch"
+    ],
+    "education_requirements": "Bachelor\u2019s Degree in Computer Science, Information Technology, Engineering or related field",
+    "location": "remote"
+  },
+  "JD_03": {
+    "title": "Java Architect",
+    "min_years_experience": 0,
+    "must_have_skills": [
+      "Java",
+      "Microservices",
+      "REST API",
+      "Web Services",
+      "React JS",
+      "Redux",
+      "Micro Frontend",
+      "TypeScript"
+    ],
+    "nice_to_have_skills": [],
+    "education_requirements": null,
+    "location": "New Jersey, USA"
+  },
+  "JD_15": {
+    "title": "Python AI/ML Engineer",
+    "min_years_experience": 2,
+    "must_have_skills": [
+      "Python",
+      "Streamlit",
+      "Fastapi",
+      "Tensorflow",
+      "Pytorch",
+      "NLP",
+      "NLTK",
+      "Spacy",
+      "BERT",
+      "SBERT",
+      "Vector Database",
+      "Milvus",
+      "FAISS",
+      "Pinecone",
+      "Vespa",
+      "Chroma",
+      "LLMs",
+      "Gen AI",
+      "Langchain",
+      "transformers"
+    ],
+    "nice_to_have_skills": [
+      "Cloud Deployment",
+      "Google Cloud",
+      "AWS",
+      "Azure"
+    ],
+    "education_requirements": null,
+    "location": "Dallas, TX"
+  }
+}

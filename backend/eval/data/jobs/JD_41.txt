@@ -1,0 +1,17 @@
+Title: Data Engineer
+Company: Piper Companies
+Location: McLean, VA
+
+Piper Companies is seeking a Data Engineer to cluster large datasets across various container and data platforms depending on external client needs. The Data Engineer will work hands-on with challenging data engineering, data management, and analytics projects.
+
+Responsibilities of the Data Engineer include:
+
+ Achieve and maintain proficiency with cluster and framework sizing, installation, debugging, performance optimization, migration, security and automation Collaborate with data scientists, analysts, business users, and IT teams to design, implement, and deploy data services and analytics. Use Continuous Integration/Continuous Delivery (CI/CD) concepts to engineer a standardized data environment Recommend and advise on optimal data models for data ingestion, integration, and visualization Integrate data from a variety of data source types
+
+Qualifications for the Data Engineer include: 
+
+ 6 years of experience in data engineering Experience with Snowflake, Databricks, Spark SQL, PySpark, and Python 3+ years cloud experience: Azure, AWS, or GCP
+
+Compensation for the Data Engineer include:
+
+ Salary: $135,000-145,000 Benefits: Full Health/Dental/Vision, 401K, Pension, Annual Bonus

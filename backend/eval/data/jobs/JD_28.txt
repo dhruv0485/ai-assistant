@@ -1,0 +1,11 @@
+Title: Manager, Software Engineering - SaaS
+Company: MoTek Technologies
+Location: San Jose, CA
+
+Manager, Software Engineering - SaaS
+We are looking for a self motivated, technical manager to lead a team of high energy engineers. Your greatest responsibility would be to mentor the engineering team members and unlock their vast potential by challenging them to step outside of their comfort zone, whether reimagining traditional business intelligence or developing innovative analytics capabilities. You will need to be really comfortable working in a fast-paced environment where you will deliver rapidly and incrementally against our roadmap.
+
+What you will be doing:Collaborate with cross-functional groups - backend, frontend, design, product, customer support, sales and marketing to understand requirements for innovative features that deliver high customer value.Own execution and delivery of roadmaps, as well as communicating status to the wider org.Partner with the staffing team to recruit and build a diverse team of engineers with the right skillset.Instill a strong sense of ownership and accountability within the team wherein members hold each other to a high bar.Enable the team to realize their potential and help them set and work towards their career development goals.Participate in discussions pertaining to the architecture and implementation techniques to represent, translate and optimize user directives into optimized queries.
+Qualifications:Have strong computer science fundamentals. Have 5+ years of technical experience and 2+ years of people management experience.Are opinionated and have great product sense.Hire, build, and develop high performing engineers.Are curious, love to learn and to dig into new technologies and can pick them up quickly.Demonstrate strong technical architecture and engineering skills along with the ability to switch between technology paradigms.Love working with world-class engineers, product managers, and architects.Strive to excel, innovate and take pride in your work.
+
+Please send your resume to jerald.baker@motektech.com

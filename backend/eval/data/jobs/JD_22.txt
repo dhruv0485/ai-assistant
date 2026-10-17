@@ -1,0 +1,7 @@
+Title: GCP Data Engineer (Only W2)
+Company: TechWish
+Location: Sterling, VA
+
+Job Title: GCP Data EngineerDuration: Long TermLocation: Remote 
+Responsibilities associated with the position:Data Ingestion Workflows: Design and implement data ingestion workflows on Google Cloud Platform, aligning with business needs and technical specifications.Collaboration and Independence: Work both independently and collaboratively with the team, ensuring effective communication with project leaders.Detailed Specifications: Prepare detailed specifications to guide the development of data ingestion processes.Technical Solutions: Develop and implement technical solutions through code development and tool configuration.SQL Expertise: Utilize SQL (Structured Query Language) to extract relevant data for analysis and troubleshooting.Testing and Documentation: Execute testing (unit, system, integration, and user acceptance) and document results.Project Participation: Participate in project planning and development, handling phases or small projects as needed.Time Tracking and Estimation: Estimate and track time for project budgeting and financial purposes.Code Reviews and Standards: Engage in solution design reviews, adhere to security standards, and provide development standards.
+MUST HAVE SKILLS:Google Pub/Sub - yearsBigQuery - yearsGoogle Dataform – yearsData ingestion to Big Query experience - yearsGoogle Cloud Storage - yearsCloud Composer - yearsFusion Cloud - yearsGitHub - yearsSQL - years

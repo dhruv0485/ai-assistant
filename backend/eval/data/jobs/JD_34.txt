@@ -1,0 +1,5 @@
+Title: Lead Java Developer
+Company: Compunnel Inc.
+Location: Columbus, OH
+
+Title: Java Spark DeveloperLocation: Columbus, OH (Day 1 Onsite) Note: Need local candidates Job Description:- Experience in Javaspark,. Should have experience in development, deployment and publishing the codeAdded advantage if have experience on Migration projectsAdded advantage if have experience on AWS environmentValue added with GIT, CICD pipelines experienceGood to have understanding of ETL , SQL and SSIS Packages

@@ -1,0 +1,31 @@
+Title: Data Engineer (SAP ECC To HANA Migration)
+Company: V-Soft Consulting Group, Inc.
+Location: Charlotte, NC
+
+Data Engineer (SAP ECC To HANA Migration) (Remote)
+
+Primary Location: Charlotte, North Carolina
+
+V-Soft Consulting is currently hiring for a Data Engineer (SAP ECC To HANA Migration) (Remote) for our premier client.
+
+Education And Experience »
+
+Prior experience working on a SAP ECC to SAP S4 Hana Migration Project.4+ years in an ETL or Data Engineering roles; building and implementing data pipelines and modeling data.Experience with SAP data and data structures.Experience managing Snowflake instances, including data ingestion and modeling.Experience with IBM DataStage is a plus.Very strong skills with SQL with the ability to write efficient queries.Familiarity with Fivetran for replication.
+
+What You’ll Do
+
+Job Responsibilities:
+
+Define, build, test, and implement data pipelines for S/4 and ECC tables into Snowflake.Work across multiple teams, such as project managers, SAP Basis, architecture, and business users.Monitor pipeline performance and cost efficiency.Collaborate with analytics and reporting teams to ensure reporting requirements are met.Perform data analysis required to troubleshoot data related issues and assist in the resolution of data issues.
+
+Interested?
+
+Qualified candidates should send their resumes to srai@vsoftconsulting.com
+
+V-Soft Consulting Group is recognized among the top 100 fastest growing staffing companies in North America, V-Soft Consulting Group is headquartered in Louisville, KY with strategic locations in India, Canada and the U.S. V-Soft is known as an agile, innovative technology services company holding several awards and distinctions and has a wide variety of partnerships across diverse technology stacks.
+
+As a valued V-Soft Consultant, you’re eligible for full benefits (Medical, Dental, Vision), a 401(k) plan, competitive compensation and more. V-Soft is partnered with numerous Fortune 500 companies, exceptionally positioned to advance your career growth.
+
+V-Soft Consulting provides equal employment opportunities to all employees and applicants for employment and prohibits discrimination and harassment of any type without regard to race, color, religion, age, sex, national origin, disability status, genetics, protected veteran status, sexual orientation, gender identity or expression, or any other characteristic protected by federal, state or local laws.
+
+For more information or to view all our open jobs, please visit www.vsoftconsulting.com or call (844) 425-8425.

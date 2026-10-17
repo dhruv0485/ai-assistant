@@ -1,0 +1,21 @@
+Title: Data Engineer
+Company: Mainz Brady Group
+Location: Beaverton, OR
+
+Sr. Data Engineer – 3-month Contract – Remote, United States – W2 ONLY, NO C2C
+
+We are seeking an experienced Data Engineer to join our world leading footwear client. The ideal candidate will have 6-7 years of relevant experience, with a focus on practical application in AWS tech stack. Experience with Databricks, Spark, and Python for coding is essential.
+
+W2 ONLY, NO C2C*
+
+Key Responsibilities:
+
+Establish database management systems and standards.Document and communicate database design.Evaluate and install database systems.Code complex programs and build reports.Assist in UI and prototype design.Participate in quality assurance.Provide expertise in database design and optimization.
+
+Qualifications:
+
+Bachelor’s degree in Computer Science or related field.6-7 years of data engineering experience.Proficiency in AWS, Databricks, Spark, and Python.Ability to work in complex environments with diverse projects.Strong communication and collaboration skills.
+
+Mainz Brady Group is a technology staffing firm with offices in California, Oregon and Washington. We specialize in Information Technology and Engineering placements on a Contract, Contract-to-hire and Direct Hire basis. Mainz Brady Group is the recipient of multiple annual Excellence Awards from the Techserve Alliance, the leading association for IT and engineering staffing firms in the U.S.
+
+Mainz Brady Group is an Equal Opportunity Employer. We are committed to Diversity & Inclusion and incorporate non-discrimination best practices in all of our staffing processes. Mainz Brady Group does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, gender expression, age, disability or any other protected class.

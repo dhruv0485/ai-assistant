@@ -33,11 +33,11 @@ GROQ_MODEL        = "qwen/qwen3.8-27b"
 OLLAMA_MODEL      = "qwen3:7b"
 EMBED_MODEL       = "all-MiniLM-L6-v2"
 
-# Decision thresholds
-REJECT_THRESHOLD    = 30    # score < 30  → reject with note
-ESCALATE_THRESHOLD  = 30    # score 30-64 → escalate to human review
-ADVANCE_THRESHOLD   = 65    # score >= 65 → auto-advance
+# Decision thresholds (Production Live Policy: ADVANCE >= 65, ESCALATE 30-64, REJECT < 30)
+REJECT_THRESHOLD    = 30    # score < 30   → reject with note
+ESCALATE_THRESHOLD  = 30    # score 30-64  → escalate to human review
+ADVANCE_THRESHOLD   = 65    # score >= 65  → auto-advance
 CONFIDENCE_RUNS     = 3     # how many times to run borderline scoring
-BORDERLINE_LOW      = 45    # bottom of borderline zone
-BORDERLINE_HIGH     = 70    # top of borderline zone
-CONFIDENCE_VARIANCE = 10    # if scores vary > this → LOW confidence
+BORDERLINE_LOW      = 30    # bottom of borderline zone
+BORDERLINE_HIGH     = 65    # top of borderline zone
+CONFIDENCE_VARIANCE = 5     # if scores vary > this → LOW confidence

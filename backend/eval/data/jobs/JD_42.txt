@@ -1,0 +1,21 @@
+Title: Data Engineer
+Company: Piper Companies
+Location: Wayne, PA
+
+Piper Companies is looking for a Data Engineer for an Investment Firm in Wayne, PA for a Hybrid, Full-Time opportunity.
+
+﻿Responsibilities of the Data Engineer:
+
+ Conduct data profiling, source-target mappings, ETL development, SQL tunings and optimization, testing and implementation Provide business and technical analysis for initiatives focusing on Data Warehouse and Business Intelligence solutions Collaborate with Business Intelligence Developers through dashboard and application development process for requirements gathering, feedback on proposed designs and models, and acceptance testing
+
+Qualifications of the Data Engineer:
+
+ 10 years’ experience, with both hands-on and lead experience in supporting data warehousing solutions Must possess the following technical skills: ETL Tools: Enterprise class ETL tool (Talend is plus) Databases & Utilities: Experience with enterprise relational databases (Snowflake experience preferred) Platforms: Microsoft / Unix Expertise and fluency in SQL language is required Knowledge of scripting languages and job schedulers is required (Powershell, etc.) Experience with various integration patterns (e.g. Flat Files, Web Services, etc.) is required Knowledge of fundamental data modeling concepts (e.g. ER Diagrams, normalization, etc.) is required Familiarity with Python, Snowflake, Talend, XML/XSLT, and Cloud Services (AWS or Azure) are preferred Excellent troubleshooting and problem-solving skills; able to root cause and debug complex code in and efficient manner/with appropriate urgency Bachelor's degree in computer science, information technology or another computer-based discipline
+
+Compensation for the Data Engineer:
+
+ Salary of $120K - $150K Hybrid Scheduling Comprehensive Benefits Package: Medical, Dental, Vision, 401K, PTO
+
+Keywords:
+
+Data, Data analysis, Engineering, Data Engineering, Data Wrangling, Data Manipulation, Data Automation, SQL, MySQL, SQL Server, RDMS, Relational Databases, Relational Database Management Systems, DBA, Database Management, Schemas, Queries, Query, DA, Extract, Transform, Load, scripting, data reports, data visualization, benefits, medical, dental, vision, 401K, pto, vacation, hybrid

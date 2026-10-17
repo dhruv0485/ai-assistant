@@ -1,0 +1,49 @@
+Title: Senior Software Engineer
+Company: Mainz Brady Group
+Location: Oakland, CA
+
+Sr. Software Engineer – 18-month Contract – W2 ONLY, NO C2C
+
+Hybrid in the following Locations (4 days onsite):
+
+Glendale, California
+
+Santa Monica, California
+
+Seattle, Washington
+
+San Francisco, California
+
+Job Description:
+
+As a Senior Software Engineer, you will focus on engineering user interfaces and interactions. You’ll play a crucial role in iterating and continuously deploying new features, functionality, and products to our customers. You’ll collaborate closely with backend and product teams to build optimized experiences for our end-users within a lean DevOps and automation culture.
+
+Key Responsibilities:
+
+Design and architect cloud-native and service-oriented UI components and applications.
+
+Collaborate with team members to design complex applications and suggest optimizations.
+
+Develop creative solutions for high-performing web applications.
+
+Influence product teams to maintain design system standards and adoption.
+
+Write clean, valuable code daily to add new features and capabilities.
+
+Investigate and resolve production issues across UI and service layers.
+
+Qualifications:
+
+5-10 years of experience in designing and architecting scalable web applications.
+
+Proficiency in ES6+ JavaScript/TypeScript and modern reactive JavaScript libraries.
+
+Experience In a Startup Environment Preferred.
+
+Strong collaboration and communication skills.
+
+Commitment to agile methodology and lean principles.
+
+Mainz Brady Group is a technology staffing firm with offices in California, Oregon and Washington. We specialize in Information Technology and Engineering placements on a Contract, Contract-to-hire and Direct Hire basis. Mainz Brady Group is the recipient of multiple annual Excellence Awards from the Techserve Alliance, the leading association for IT and engineering staffing firms in the U.S.
+
+Mainz Brady Group is an Equal Opportunity Employer. We are committed to Diversity & Inclusion and incorporate non-discrimination best practices in all of our staffing processes. Mainz Brady Group does not discriminate on the basis of race, color, religion, sex, sexual orientation, gender identity, gender expression, age, disability or any other protected class.

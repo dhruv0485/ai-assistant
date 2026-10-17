@@ -1,0 +1,7 @@
+Title: Data Engineer
+Company: SKYZEN Technologies LLC
+Location: Philadelphia, PA
+
+Job DescriptionPosition: Senior Data EngineerLocation: Philadelphia, PADuration: 6 Months Contract-Hire
+Share your resumes to aadeetya@skyzentech.com.
+QualificationsData Engineering and Data Modeling skillsExperience with ETL (Extract Transform Load) processesData Warehousing and Data Analytics experienceStrong problem-solving and analytical skillsProficiency in SQL and programming languages (e.g., Python, Java)Knowledge of cloud platforms (e.g., AWS, Azure) and big data technologies (e.g., Hadoop, Spark) is a plusBachelor's degree in Computer Science, Information Systems, or a related fieldExcellent communication and collaboration skills

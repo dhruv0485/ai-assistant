@@ -1,0 +1,6 @@
+Title: Sr Data Engineer with Kafka
+Company: ZenithMinds Inc
+Location: Austin, TX
+
+Data Engineer with Kafka (W2 Only)💯% Remote
+Min 10 to12+ strong development experience neededVery strong experience in Kafka and Kafka data injection Strong exp in working with API.Strong exp in Python with AWS.Experience with Informatica IICS and Snowflake. Expertise in Snowflake's cloud data platform, including data loading, transformation, and querying using Snowflake SQL.Experience with SQL-based development, optimization, and tuning for large-scale data processing.Strong understanding of dimensional modeling concepts and experience in designing and implementing data models for analytics and reporting purposes.hands-on experience in IICS or Informatica Power Center ETL development1+ years of hands-on experience in Linux and shell scripting.1+ years of experience working with git.1+ years of related industry experience in an enterprise environment.1+ years of hands-on experience in Python programming.

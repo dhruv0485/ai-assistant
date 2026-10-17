@@ -1,0 +1,10 @@
+Title: Display Software Engineer (16939)
+Company: H10 Capital
+Location: Redmond, WA
+
+Shortlisting soon or when we fill our candidate spots!
+I hope this message finds you well. I would love to connect to discuss an opportunity with Microsoft. If you are interested, please respond with your Word format resume. Thank you!Deadline: shortlisting soon or when our candidate spots are fullEmail: Sara@H10Capital.comText: (425)200-4777
+Title: Display Software Engineer (16939) Redmond, WADuration: Managed Services (a contract that can renew indefinitely) 
+Responsibilities:- Firmware and driver development for the Mixed Reality display software team.- Help define the next generation of Mixed Reality products.- Develop, instrumentation, test, debug, and improve our own and third-party displaydiagnostics and calibration tools.- Design and build functional test scripts and software for display firmware features.- Assist with hardware bring-up and device manufacturing and failure analysis.- Review and provide feedback on incoming software and firmware code changes.- Provide documentation/wiki on display software/firmware features and troubleshooting tips.
+Required Qualifications:- BS or MS in Computer Engineering, Electrical Engineering, Computer Science or related fieldOR equivalent professional experience.- 5+ (senior) or 3+ (junior) years of professional experience in embedded software/firmwaredevelopment.- Strong programming skills (C/C++ required and Python desirable).- Embedded hardware experience, including understanding schematics, I2C, SPI, USB, RS232,and associated communication protocols, is a plus.
+Preferred Qualifications:- Windows or Linux device driver development.- Experience in Android and/or Qualcomm SoC.- Experience in display hardware bring-up and manufacturing.- Excellent written and verbal communications skills.- Experience with debugging tools such as JTAG, oscilloscopes and bus analyzers.- Experience in AR/VR technology.

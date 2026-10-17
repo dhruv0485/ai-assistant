@@ -1,0 +1,9 @@
+Title: Frontend Engineer
+Company: Prepto
+Location: Santa Clara, CA
+
+The ideal candidate will be responsible for developing several key features in the Prepto's application. There is a lot of learning and fun in this experience.
+Key Responsibilities:Development with React and Redux: Develop and implement responsive UI components using React, Redux, and JavaScript, adhering to best coding practices.Collaboration and Version Control: Work closely with cross-functional teams, ensuring seamless integration of frontend and backend services. Utilize Git for version control and collaboration.Continuous Learning: Engage in continuous learning to enhance skills and apply software engineering design principles.
+Preferred Qualifications:Technical Proficiency: Strong skills in React, Redux, JavaScript, and familiarity with at least one programming language. Knowledge of databases and Git is essential.Educational Background: Currently pursuing or completed an MS degree in Computer Science or a related field. A strong understanding of software engineering design principles is expected.Design Sensitivity: An eye for good design, with an understanding of user experience best practices.
+Benefits:Comprehensive Benefits: Free lunch, snacks, and access to weekly happy hours and parties.Professional Development: Opportunities for referrals to top tech companies like Amazon, Google, Meta, Snap, and Uber for those interested in exploring further career opportunities.Learning Opportunities: Weekly sessions with engineers from FAANG companies, providing valuable industry insights, tips, and a platform for Q&A.
+*This internship emphasizes learning, growth, and building your resume with the help of mentors. We are a small team, so you will directly be working with industry veterans in software engineering.

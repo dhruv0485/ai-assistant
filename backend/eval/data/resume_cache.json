@@ -1,0 +1,510 @@
+{
+  "RES_SWE_067": {
+    "name": null,
+    "skills": [
+      "MS Office Suite 2000-2016",
+      "O365",
+      "GroupWise",
+      "HEAT Call Logging",
+      "Crystal Reports",
+      "T3 VoiceMail",
+      "NetMotion",
+      "Novell iManager",
+      "Active Directory",
+      "Heatweb-fs",
+      "Windows 2000/XP/7/8/10",
+      "UNIX",
+      "DOS",
+      "SQL",
+      "Access",
+      "Excel",
+      "Word",
+      "Macros"
+    ],
+    "years_experience": null,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Lead Information Technology Support Specialist",
+        "company": "Company Name",
+        "duration_years": 9.0
+      },
+      {
+        "title": "Information Technology Support Specialist",
+        "company": "Company Name",
+        "duration_years": 9.0
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_088": {
+    "name": null,
+    "skills": [
+      "Building Automation Systems",
+      "Enterprise Project Lifecycle methodology",
+      "network infrastructure",
+      "Network engineering",
+      "project management",
+      "product support",
+      "standard documentation",
+      "Enterprise platforms",
+      "PMP Certification",
+      "Project tracking",
+      "Hardware and software upgrade planning",
+      "Certified Information Security Manager",
+      "User experience (UX) design",
+      "Server management",
+      "Mac and PC expert",
+      "Computer programming",
+      "Control system design",
+      "QA",
+      "computer diagnostics",
+      "technical assistance and support",
+      "enterprise and business critical applications",
+      "configuration for packaged software",
+      "enterprise class storage systems",
+      "workstation and server class systems",
+      "server infrastructure",
+      "development",
+      "staging",
+      "production systems"
+    ],
+    "years_experience": null,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Manager - Information Technology and Building Automation Systems",
+        "company": "Company Name",
+        "duration_years": 10.5
+      }
+    ],
+    "location": null
+  },
+  "RES_MIS_022": {
+    "name": null,
+    "skills": [
+      "Recruiting",
+      "Onboarding",
+      "Project Management",
+      "Event Planning",
+      "Employee Relations",
+      "Teamwork/Collaboration",
+      "Training and Development",
+      "Public Speaking",
+      "Social Media Marketing",
+      "ADP",
+      "Workday",
+      "Microsoft Office Suite",
+      "ADP Benefits",
+      "Branding",
+      "Budget",
+      "Oral communication",
+      "Competitive",
+      "Email",
+      "HRIS",
+      "HR Leadership",
+      "Marketing",
+      "MS Excel",
+      "Product manager",
+      "Recruitment",
+      "Researching",
+      "Strategy",
+      "Workshops",
+      "Written",
+      "Taleo",
+      "Handshake"
+    ],
+    "years_experience": 3,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "HR Associate",
+        "company": "Company Name",
+        "duration_years": 1.42
+      },
+      {
+        "title": "HR Intern",
+        "company": "Company Name",
+        "duration_years": 1.25
+      }
+    ],
+    "location": "San Francisco Bay Area, USA"
+  },
+  "RES_SWE_141": {
+    "name": null,
+    "skills": [
+      "Java",
+      "Amazon AWS",
+      "Hibernate",
+      "PHP",
+      "EC2",
+      "Elastic Search",
+      "C++",
+      "JSMVC",
+      "JUnit",
+      "C",
+      "HTML",
+      "Selenium",
+      "CanJS",
+      "CSS",
+      "Aurora",
+      "PL/SQL",
+      "Bootstrap",
+      "Jenkins",
+      "Oracle",
+      "Python",
+      "Phabricator",
+      "My/SQL",
+      "AJAX",
+      "GitHub",
+      "JavaScript",
+      "Camel",
+      "Jira",
+      "REST and SOAP services",
+      "MongoDB",
+      "Perl"
+    ],
+    "years_experience": 17,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Engineering Operations Director",
+        "company": "Company Name",
+        "duration_years": 11.0
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_065": {
+    "name": null,
+    "skills": [
+      "Windows XP",
+      "Windows Vista",
+      "Windows 7",
+      "Windows 8",
+      "Ubuntu Linux",
+      "Mac OS X",
+      "VMware",
+      "Microsoft SCSM",
+      "SCCM",
+      "Cherwell Service Management",
+      "ImageNow",
+      "Active Directory",
+      "AD DS",
+      "Spiceworks"
+    ],
+    "years_experience": null,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Support & Network Services Intern",
+        "company": "Company Name",
+        "duration_years": 0.25
+      },
+      {
+        "title": "Information Technology Lead Intern",
+        "company": "Company Name",
+        "duration_years": 1.0
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_071": {
+    "name": null,
+    "skills": [
+      "Master Data Management",
+      "Data Stewardship",
+      "Data Quality",
+      "RPA",
+      "Data Warehousing",
+      "Data Sync SOP",
+      "GS1 standardization",
+      "Data Governance",
+      "BI",
+      "SSRS",
+      "PowerBI",
+      "WMS",
+      "ERP",
+      "QMS",
+      "CMMS",
+      "GDPR",
+      "UAT",
+      "gap analysis",
+      "workflow process maps",
+      "system integration",
+      "infrastructure topology"
+    ],
+    "years_experience": null,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Master Data Manager",
+        "company": "Company Name",
+        "duration_years": 6.0
+      },
+      {
+        "title": "Director of Information Technology",
+        "company": "Company Name",
+        "duration_years": 2.0
+      }
+    ],
+    "location": null
+  },
+  "RES_MIS_032": {
+    "name": null,
+    "skills": [
+      "Staff Recruitment & Retention",
+      "Employee Relations",
+      "Alternative Dispute Resolution (ADR)",
+      "Benefits Administration",
+      "HR Program/Project Management",
+      "Orientation & OnBoarding",
+      "HRIS Technologies",
+      "Training & Development",
+      "Performance Management",
+      "Organizational Development",
+      "UltiPro",
+      "PeopleSoft Enterprise Human Resources",
+      "ADP",
+      "MS Office",
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "Access",
+      "Outlook",
+      "Project Management",
+      "Inventory Control",
+      "Conflict Resolution",
+      "HR records management",
+      "HR policies development",
+      "Legal compliance",
+      "Negotiation",
+      "Teambuilding",
+      "Writing personnel manuals",
+      "Writing corporate policies",
+      "Writing job descriptions",
+      "Writing management reports"
+    ],
+    "years_experience": 9,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "HR Generalist",
+        "company": "Company Name",
+        "duration_years": 7.1
+      }
+    ],
+    "location": null
+  },
+  "RES_MIS_042": {
+    "name": null,
+    "skills": [
+      "New employee orientations",
+      "Compensation and benefits",
+      "Termination procedures",
+      "HR Compliance",
+      "Project management",
+      "MS Office",
+      "HR Systems",
+      "Team building",
+      "Employee recruitment",
+      "Interpersonal Skills",
+      "Communication",
+      "Flexibility"
+    ],
+    "years_experience": 2,
+    "education": {
+      "degree": "MBA",
+      "field": "Human Resource",
+      "institution": "Crescent Business School",
+      "year": "2012"
+    },
+    "past_roles": [
+      {
+        "title": "HR Executive",
+        "company": "Company Name",
+        "duration_years": 1.83
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_057": {
+    "name": null,
+    "skills": [
+      "GIS",
+      "SharePoint",
+      "CIS",
+      "Infor CMMS",
+      "Neptune AMR",
+      "Cityworks CMMS",
+      "XML",
+      "Crystal Reports",
+      "Lucity CMMS",
+      "Infor Enterprise Asset Management 11.1",
+      "SQL Server",
+      "Infor Public Sector",
+      "PL/SQL",
+      "Crystal Info Server 7"
+    ],
+    "years_experience": 25,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Consultant",
+        "company": "Company Name",
+        "duration_years": 8.0
+      },
+      {
+        "title": "Utility Solutions Consultant",
+        "company": "Company Name",
+        "duration_years": 11.2
+      },
+      {
+        "title": "CEO/Consultant",
+        "company": "Company Name",
+        "duration_years": 6.0
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_008": {
+    "name": null,
+    "skills": [
+      "Personnel Management",
+      "Leadership",
+      "Management of on-shore/off-shore resources",
+      "Financial budgets/planning",
+      "Project Management",
+      "Business Intelligence",
+      "Communications",
+      "Business Analysis",
+      "Report Development/ Analysis",
+      "User Relations/User Training Development",
+      "Microsoft Office",
+      "Business Objects",
+      "SAP BO",
+      "SAP BW",
+      "SharePoint",
+      "SharePoint 2010",
+      "Database Administration",
+      "Web Development"
+    ],
+    "years_experience": 10,
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null,
+      "year": null
+    },
+    "past_roles": [
+      {
+        "title": "Applications Team Leader",
+        "company": "Company Name",
+        "duration_years": 13.0
+      }
+    ],
+    "location": null
+  },
+  "RES_SWE_124": {
+    "name": null,
+    "skills": [
+      "C",
+      "SQL",
+      "Python",
+      "R",
+      "Tableau",
+      "HP ALM Quality center",
+      "HP QTP",
+      "MS office",
+      "Trello",
+      "Streak CRM",
+      "VB script",
+      "automation tools",
+      "business processes",
+      "Chemistry",
+      "CRM",
+      "client",
+      "English",
+      "event management",
+      "functional",
+      "HP",
+      "image",
+      "team lead",
+      "machinery",
+      "Mathematics",
+      "Oil",
+      "developer",
+      "Physics",
+      "Programming",
+      "progress",
+      "Project management",
+      "QTP",
+      "Quick Test Professional"
+    ],
+    "years_experience": 2,
+    "education": {
+      "degree": "MS IM",
+      "field": "Chemical Engineering",
+      "institution": "Syracuse University",
+      "year": "2015"
+    },
+    "past_roles": [
+      {
+        "title": "Software Engineering Analyst",
+        "company": "Enactus chapter of Thapar University",
+        "duration_years": 0.42
+      },
+      {
+        "title": "Software Engineering Analyst",
+        "company": "Global Site System Services",
+        "duration_years": 0.17
+      },
+      {
+        "title": "Associate Software Engineer",
+        "company": "Global Site System Services",
+        "duration_years": 1.0
+      }
+    ],
+    "location": null
+  }
+}

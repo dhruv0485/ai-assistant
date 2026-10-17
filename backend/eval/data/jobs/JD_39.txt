@@ -1,0 +1,77 @@
+Title: Remote - Software Engineer - OIPA Configurator
+Company: State Farm
+Location: Dunwoody, GA
+
+Overview
+
+We are not just offering a job but a meaningful career! Come join our passionate team!
+
+As a Fortune 50 company, we hire the best employees to serve our customers, making us a leader in the insurance and financial services industry. State Farm embraces diversity and inclusion to ensure a workforce that is engaged, builds on the strengths and talents of all associates, and creates a Good Neighbor culture.
+
+We offer competitive benefits and pay with the potential for an annual financial award based on both individual and enterprise performance. Our employees have an opportunity to participate in volunteer events within the community and engage in a learning culture. We offer programs to assist with tuition reimbursement, professional designations, employee development, wellness initiatives, and more!
+
+Visit our Careers page for more information on our benefits, locations and the process of joining the State Farm team!
+
+REMOTE: Qualified candidates (outside of hub locations listed below) may be considered for remote work arrangements based on where a candidate currently resides or is currently located.
+
+HYBRID: Qualified candidates (in or near hub locations listed below) should plan to spend time working from home and some time working in the office as part of our hybrid work environment.
+
+HUB LOCATIONS: Dunwoody, GA; Richardson, TX; Tempe, AZ; or Bloomington, IL
+
+SPONSORSHIP: Applicants are required to be eligible to lawfully work in the U.S. immediately; employer will not sponsor applicants for U.S. work authorization (e.g. H-1B visa) for this opportunity.
+
+Responsibilities
+
+Grow Your Skills, Grow Your Potential
+
+Do you want to be a part of a tight knit team, who directly impacts the customer experience for a Fortune 50 company? Do you want to be a part of a fast paced, constantly changing environment where passion for how we communicate with our customers is a must? Come join the Life Communications product team at State Farm!
+
+The Life Communications product team is tasked with modernizing the way we communicate with Life Policyholders, through a digital first omnichannel strategy. This team is currently undergoing several modernization projects including a new AWS hosted front end User Initiated Communication tool, the Life Modernization (API, Schemas, LPAT) development work and a transition from antiquated technologies to a more modern solution for populating legacy policy pages. The selected applicant will join the team as a Software Engineer for the Oracle Insurance Policy Administration (OIPA) system and Equisoft Design manager. This team uses the OIPA Platform as its policy administration system for all Life products at State Farm.
+
+This individual should be dedicated to delivering high quality results, digging in, triaging problems and showing that continuous growth and improvement mindset. The Software Engineer should be able to establish a vision that goes beyond the here and now and provides a pathway into the future.
+
+Qualifications
+
+Experience with OIPA configuration/testing and using extension functionality to integrate with enterprise capabilities. Java or PythonJavascript framework experience (React, Angular, VueJS, Ember)Understanding of MySupport process with Oracle to drive bug and patch installations. 
+
+Perfered Skills:
+
+Familiar with Puppet, Docker, Kubernetes or other containerization technologies desiredContinuous delivery pipeline development (ylm/bash), GitLab, GitLab CI desiredAWS Cloud experience desired but not requiredLife Insurance product knowledge a plus
+
+Soft Skills:
+
+Excellent interpersonal and technical communication skills, with the ability to communicate with audiences of varying degrees of technical skillsStrong work ethic with a focus on high quality and attention to detailStrong analytical skills with the ability to critically think and solve complex problemsAbility to work independently – self-motivated to triage/solve problemsStrong desire to learn and grow to improve both interpersonal and technical skillsNot afraid to ask questions – and knowing when to ask questionsDriven to deliver high quality work with a vision for future development – not just short-term delivery goals 
+
+For Los Angeles candidates: Pursuant to the Los Angeles Fair Chance Initiative for Hiring, we will consider for employment qualified applicants with criminal histories.
+
+For San Francisco candidates: Pursuant to the San Francisco Fair Chance Ordinance, we will consider for employment qualified applicants with arrest and conviction records.
+
+For Colorado, Hawaii and Washington State candidates: Salary Range: $90,600-$156,200
+
+For California, New York, and CT candidates: Potential salary range: $90,600-$177,500
+
+Potential yearly incentive pay: up to 15% of base salary
+
+Application deadline is expected to close on 04/29/2024. Applicant volume and hiring needs may result in early closure or extension beyond the listed deadline. To submit an application, click "Apply" on the job listing page on the State Farm career site.
+
+Competitive Benefits, including:
+
+401k Plan
+
+Health Insurance
+
+Dental/Vision plans
+
+Life Insurance
+
+Paid Time Off
+
+Annual Merit Increases
+
+Tuition Reimbursement
+
+Health Initiatives
+
+For More Details Visit Our Benefits Summary Page
+
+SFARM

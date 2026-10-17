@@ -1,0 +1,5430 @@
+{
+  "metrics_summary": {
+    "tfidf": {
+      "accuracy": 0.3,
+      "mae": 46.23
+    },
+    "bm25": {
+      "accuracy": 0.35,
+      "mae": 29.74
+    },
+    "keyword_overlap": {
+      "accuracy": 0.33,
+      "mae": 41.69
+    },
+    "random": {
+      "accuracy": 0.35,
+      "mae": 32.35
+    }
+  },
+  "predictions": {
+    "tfidf": [
+      {
+        "pair_id": "PAIR_001",
+        "raw_similarity": 0.1352,
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_002",
+        "raw_similarity": 0.0227,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_003",
+        "raw_similarity": 0.0463,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_004",
+        "raw_similarity": 0.082,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_005",
+        "raw_similarity": 0.0427,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_006",
+        "raw_similarity": 0.0426,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_007",
+        "raw_similarity": 0.0783,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_008",
+        "raw_similarity": 0.0312,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_009",
+        "raw_similarity": 0.0188,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_010",
+        "raw_similarity": 0.1483,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_011",
+        "raw_similarity": 0.0261,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_012",
+        "raw_similarity": 0.0268,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_013",
+        "raw_similarity": 0.0325,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_014",
+        "raw_similarity": 0.0527,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_015",
+        "raw_similarity": 0.0592,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_016",
+        "raw_similarity": 0.0134,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_017",
+        "raw_similarity": 0.0541,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_018",
+        "raw_similarity": 0.033,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_019",
+        "raw_similarity": 0.0895,
+        "score": 8,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_020",
+        "raw_similarity": 0.0744,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_021",
+        "raw_similarity": 0.0774,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_022",
+        "raw_similarity": 0.0919,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_023",
+        "raw_similarity": 0.0731,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_024",
+        "raw_similarity": 0.0395,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_025",
+        "raw_similarity": 0.1089,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_026",
+        "raw_similarity": 0.0293,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_027",
+        "raw_similarity": 0.0492,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_028",
+        "raw_similarity": 0.0287,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_029",
+        "raw_similarity": 0.0344,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_030",
+        "raw_similarity": 0.0351,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_031",
+        "raw_similarity": 0.0686,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_032",
+        "raw_similarity": 0.0989,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_033",
+        "raw_similarity": 0.0627,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_034",
+        "raw_similarity": 0.0265,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_035",
+        "raw_similarity": 0.0393,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_036",
+        "raw_similarity": 0.0325,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_037",
+        "raw_similarity": 0.0284,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_038",
+        "raw_similarity": 0.0888,
+        "score": 8,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_039",
+        "raw_similarity": 0.1022,
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_040",
+        "raw_similarity": 0.1148,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_041",
+        "raw_similarity": 0.0293,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_042",
+        "raw_similarity": 0.0508,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_043",
+        "raw_similarity": 0.0962,
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_044",
+        "raw_similarity": 0.0574,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_045",
+        "raw_similarity": 0.0561,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_046",
+        "raw_similarity": 0.0299,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_047",
+        "raw_similarity": 0.0263,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_048",
+        "raw_similarity": 0.068,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_049",
+        "raw_similarity": 0.0367,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_050",
+        "raw_similarity": 0.0336,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_051",
+        "raw_similarity": 0.0172,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_052",
+        "raw_similarity": 0.071,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_053",
+        "raw_similarity": 0.117,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_054",
+        "raw_similarity": 0.0746,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_055",
+        "raw_similarity": 0.0458,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_056",
+        "raw_similarity": 0.0678,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_057",
+        "raw_similarity": 0.062,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_058",
+        "raw_similarity": 0.0894,
+        "score": 8,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_059",
+        "raw_similarity": 0.0455,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_060",
+        "raw_similarity": 0.0716,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_061",
+        "raw_similarity": 0.0672,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_062",
+        "raw_similarity": 0.0604,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_063",
+        "raw_similarity": 0.0518,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_064",
+        "raw_similarity": 0.0484,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_065",
+        "raw_similarity": 0.0225,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_066",
+        "raw_similarity": 0.0549,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_067",
+        "raw_similarity": 0.0507,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_068",
+        "raw_similarity": 0.0348,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_069",
+        "raw_similarity": 0.018,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_070",
+        "raw_similarity": 0.0507,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_071",
+        "raw_similarity": 0.0545,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_072",
+        "raw_similarity": 0.0226,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_073",
+        "raw_similarity": 0.0402,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_074",
+        "raw_similarity": 0.0271,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_075",
+        "raw_similarity": 0.0841,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_076",
+        "raw_similarity": 0.0641,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_077",
+        "raw_similarity": 0.0623,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_078",
+        "raw_similarity": 0.0418,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_079",
+        "raw_similarity": 0.0432,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_080",
+        "raw_similarity": 0.0694,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_081",
+        "raw_similarity": 0.0225,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_082",
+        "raw_similarity": 0.0486,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_083",
+        "raw_similarity": 0.0581,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_084",
+        "raw_similarity": 0.0545,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_085",
+        "raw_similarity": 0.0934,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_086",
+        "raw_similarity": 0.0162,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_087",
+        "raw_similarity": 0.0415,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_088",
+        "raw_similarity": 0.0571,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_089",
+        "raw_similarity": 0.0626,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_090",
+        "raw_similarity": 0.0588,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_091",
+        "raw_similarity": 0.0759,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_092",
+        "raw_similarity": 0.0306,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_093",
+        "raw_similarity": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_094",
+        "raw_similarity": 0.036,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_095",
+        "raw_similarity": 0.0225,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_096",
+        "raw_similarity": 0.0351,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_097",
+        "raw_similarity": 0.0414,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_098",
+        "raw_similarity": 0.0543,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_099",
+        "raw_similarity": 0.062,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_100",
+        "raw_similarity": 0.1416,
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_101",
+        "raw_similarity": 0.0438,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_102",
+        "raw_similarity": 0.039,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_103",
+        "raw_similarity": 0.0642,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_104",
+        "raw_similarity": 0.0573,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_105",
+        "raw_similarity": 0.0686,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_106",
+        "raw_similarity": 0.0218,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_107",
+        "raw_similarity": 0.0541,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_108",
+        "raw_similarity": 0.0378,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_109",
+        "raw_similarity": 0.0098,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_110",
+        "raw_similarity": 0.0302,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_111",
+        "raw_similarity": 0.0797,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_112",
+        "raw_similarity": 0.0239,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_113",
+        "raw_similarity": 0.084,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_114",
+        "raw_similarity": 0.048,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_115",
+        "raw_similarity": 0.0342,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_116",
+        "raw_similarity": 0.0301,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_117",
+        "raw_similarity": 0.0354,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_118",
+        "raw_similarity": 0.0555,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_119",
+        "raw_similarity": 0.0527,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_120",
+        "raw_similarity": 0.0455,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_121",
+        "raw_similarity": 0.0382,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_122",
+        "raw_similarity": 0.0488,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_123",
+        "raw_similarity": 0.0602,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_124",
+        "raw_similarity": 0.0663,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_125",
+        "raw_similarity": 0.0878,
+        "score": 7,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_126",
+        "raw_similarity": 0.0261,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_127",
+        "raw_similarity": 0.0738,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_128",
+        "raw_similarity": 0.0756,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_129",
+        "raw_similarity": 0.0942,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_130",
+        "raw_similarity": 0.0536,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_131",
+        "raw_similarity": 0.019,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_132",
+        "raw_similarity": 0.0678,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_133",
+        "raw_similarity": 0.0548,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_134",
+        "raw_similarity": 0.061,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_135",
+        "raw_similarity": 0.0896,
+        "score": 8,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_136",
+        "raw_similarity": 0.0998,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_137",
+        "raw_similarity": 0.0397,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_138",
+        "raw_similarity": 0.1312,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_139",
+        "raw_similarity": 0.0735,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_140",
+        "raw_similarity": 0.1307,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_141",
+        "raw_similarity": 0.1094,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_142",
+        "raw_similarity": 0.0541,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_143",
+        "raw_similarity": 0.0958,
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_144",
+        "raw_similarity": 0.0297,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_145",
+        "raw_similarity": 0.0773,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_146",
+        "raw_similarity": 0.0449,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_147",
+        "raw_similarity": 0.0548,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_148",
+        "raw_similarity": 0.0522,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_149",
+        "raw_similarity": 0.0245,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_150",
+        "raw_similarity": 0.0537,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_151",
+        "raw_similarity": 0.0167,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_152",
+        "raw_similarity": 0.0146,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_153",
+        "raw_similarity": 0.062,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_154",
+        "raw_similarity": 0.0695,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_155",
+        "raw_similarity": 0.0236,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_156",
+        "raw_similarity": 0.0251,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_157",
+        "raw_similarity": 0.1064,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_158",
+        "raw_similarity": 0.0802,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_159",
+        "raw_similarity": 0.0441,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_160",
+        "raw_similarity": 0.0669,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_161",
+        "raw_similarity": 0.0291,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_162",
+        "raw_similarity": 0.0634,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_163",
+        "raw_similarity": 0.0781,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_164",
+        "raw_similarity": 0.0495,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_165",
+        "raw_similarity": 0.0243,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_166",
+        "raw_similarity": 0.0569,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_167",
+        "raw_similarity": 0.0463,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_168",
+        "raw_similarity": 0.0744,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_169",
+        "raw_similarity": 0.0747,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_170",
+        "raw_similarity": 0.0535,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_171",
+        "raw_similarity": 0.0269,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_172",
+        "raw_similarity": 0.0509,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_173",
+        "raw_similarity": 0.0759,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_174",
+        "raw_similarity": 0.0543,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_175",
+        "raw_similarity": 0.0604,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_176",
+        "raw_similarity": 0.1231,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_177",
+        "raw_similarity": 0.0388,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_178",
+        "raw_similarity": 0.0435,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_179",
+        "raw_similarity": 0.0718,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_180",
+        "raw_similarity": 0.0139,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_181",
+        "raw_similarity": 0.052,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_182",
+        "raw_similarity": 0.0443,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_183",
+        "raw_similarity": 0.0283,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_184",
+        "raw_similarity": 0.0862,
+        "score": 7,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_185",
+        "raw_similarity": 0.1053,
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_186",
+        "raw_similarity": 0.0251,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_187",
+        "raw_similarity": 0.0536,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_188",
+        "raw_similarity": 0.044,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_189",
+        "raw_similarity": 0.0768,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_190",
+        "raw_similarity": 0.0619,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_191",
+        "raw_similarity": 0.0429,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_192",
+        "raw_similarity": 0.0161,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_193",
+        "raw_similarity": 0.0303,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_194",
+        "raw_similarity": 0.0704,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_195",
+        "raw_similarity": 0.0436,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_196",
+        "raw_similarity": 0.0193,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_197",
+        "raw_similarity": 0.1334,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_198",
+        "raw_similarity": 0.0267,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_199",
+        "raw_similarity": 0.0352,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_200",
+        "raw_similarity": 0.0259,
+        "score": 5,
+        "decision": "REJECT"
+      }
+    ],
+    "bm25": [
+      {
+        "pair_id": "PAIR_001",
+        "raw_bm25": 80.74,
+        "score": 85,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_002",
+        "raw_bm25": 24.29,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_003",
+        "raw_bm25": 40.62,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_004",
+        "raw_bm25": 89.81,
+        "score": 95,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_005",
+        "raw_bm25": 49.16,
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_006",
+        "raw_bm25": 64.41,
+        "score": 61,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_007",
+        "raw_bm25": 53.35,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_008",
+        "raw_bm25": 31.29,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_009",
+        "raw_bm25": 32.47,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_010",
+        "raw_bm25": 61.33,
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_011",
+        "raw_bm25": 39.17,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_012",
+        "raw_bm25": 47.48,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_013",
+        "raw_bm25": 48.67,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_014",
+        "raw_bm25": 23.38,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_015",
+        "raw_bm25": 72.87,
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_016",
+        "raw_bm25": 22.83,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_017",
+        "raw_bm25": 49.36,
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_018",
+        "raw_bm25": 26.24,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_019",
+        "raw_bm25": 58.96,
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_020",
+        "raw_bm25": 52.8,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_021",
+        "raw_bm25": 78.91,
+        "score": 83,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_022",
+        "raw_bm25": 34.83,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_023",
+        "raw_bm25": 36.99,
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_024",
+        "raw_bm25": 45.16,
+        "score": 33,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_025",
+        "raw_bm25": 70.95,
+        "score": 71,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_026",
+        "raw_bm25": 32.79,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_027",
+        "raw_bm25": 40.8,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_028",
+        "raw_bm25": 45.07,
+        "score": 33,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_029",
+        "raw_bm25": 59.06,
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_030",
+        "raw_bm25": 47.73,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_031",
+        "raw_bm25": 67.08,
+        "score": 65,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_032",
+        "raw_bm25": 59.61,
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_033",
+        "raw_bm25": 76.73,
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_034",
+        "raw_bm25": 50.84,
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_035",
+        "raw_bm25": 52.34,
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_036",
+        "raw_bm25": 35.42,
+        "score": 19,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_037",
+        "raw_bm25": 48.4,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_038",
+        "raw_bm25": 53.64,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_039",
+        "raw_bm25": 61.64,
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_040",
+        "raw_bm25": 47.02,
+        "score": 36,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_041",
+        "raw_bm25": 57.29,
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_042",
+        "raw_bm25": 52.16,
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_043",
+        "raw_bm25": 69.9,
+        "score": 70,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_044",
+        "raw_bm25": 84.27,
+        "score": 91,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_045",
+        "raw_bm25": 54.61,
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_046",
+        "raw_bm25": 21.99,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_047",
+        "raw_bm25": 40.99,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_048",
+        "raw_bm25": 44.8,
+        "score": 33,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_049",
+        "raw_bm25": 61.58,
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_050",
+        "raw_bm25": 67.32,
+        "score": 66,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_051",
+        "raw_bm25": 43.06,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_052",
+        "raw_bm25": 56.18,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_053",
+        "raw_bm25": 65.55,
+        "score": 63,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_054",
+        "raw_bm25": 36.79,
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_055",
+        "raw_bm25": 72.68,
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_056",
+        "raw_bm25": 70.64,
+        "score": 71,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_057",
+        "raw_bm25": 51.74,
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_058",
+        "raw_bm25": 56.86,
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_059",
+        "raw_bm25": 68.16,
+        "score": 67,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_060",
+        "raw_bm25": 28.45,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_061",
+        "raw_bm25": 53.43,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_062",
+        "raw_bm25": 90.14,
+        "score": 95,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_063",
+        "raw_bm25": 43.66,
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_064",
+        "raw_bm25": 59.14,
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_065",
+        "raw_bm25": 48.97,
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_066",
+        "raw_bm25": 72.04,
+        "score": 73,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_067",
+        "raw_bm25": 60.61,
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_068",
+        "raw_bm25": 39.44,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_069",
+        "raw_bm25": 39.65,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_070",
+        "raw_bm25": 55.56,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_071",
+        "raw_bm25": 31.8,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_072",
+        "raw_bm25": 39.49,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_073",
+        "raw_bm25": 23.3,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_074",
+        "raw_bm25": 42.53,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_075",
+        "raw_bm25": 53.35,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_076",
+        "raw_bm25": 61.8,
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_077",
+        "raw_bm25": 48.46,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_078",
+        "raw_bm25": 57.33,
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_079",
+        "raw_bm25": 50.01,
+        "score": 40,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_080",
+        "raw_bm25": 26.29,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_081",
+        "raw_bm25": 62.61,
+        "score": 59,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_082",
+        "raw_bm25": 44.02,
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_083",
+        "raw_bm25": 57.56,
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_084",
+        "raw_bm25": 52.44,
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_085",
+        "raw_bm25": 52.88,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_086",
+        "raw_bm25": 39.63,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_087",
+        "raw_bm25": 58.68,
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_088",
+        "raw_bm25": 56.02,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_089",
+        "raw_bm25": 48.89,
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_090",
+        "raw_bm25": 43.02,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_091",
+        "raw_bm25": 44.16,
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_092",
+        "raw_bm25": 41.9,
+        "score": 29,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_093",
+        "raw_bm25": 24.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_094",
+        "raw_bm25": 43.08,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_095",
+        "raw_bm25": 33.96,
+        "score": 17,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_096",
+        "raw_bm25": 36.64,
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_097",
+        "raw_bm25": 43.81,
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_098",
+        "raw_bm25": 44.46,
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_099",
+        "raw_bm25": 36.65,
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_100",
+        "raw_bm25": 71.24,
+        "score": 71,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_101",
+        "raw_bm25": 54.75,
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_102",
+        "raw_bm25": 64.42,
+        "score": 62,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_103",
+        "raw_bm25": 60.46,
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_104",
+        "raw_bm25": 48.0,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_105",
+        "raw_bm25": 54.44,
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_106",
+        "raw_bm25": 35.35,
+        "score": 19,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_107",
+        "raw_bm25": 67.01,
+        "score": 65,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_108",
+        "raw_bm25": 64.12,
+        "score": 61,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_109",
+        "raw_bm25": 31.89,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_110",
+        "raw_bm25": 37.13,
+        "score": 22,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_111",
+        "raw_bm25": 87.85,
+        "score": 95,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_112",
+        "raw_bm25": 52.97,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_113",
+        "raw_bm25": 57.41,
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_114",
+        "raw_bm25": 90.42,
+        "score": 95,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_115",
+        "raw_bm25": 54.07,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_116",
+        "raw_bm25": 48.42,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_117",
+        "raw_bm25": 46.17,
+        "score": 35,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_118",
+        "raw_bm25": 62.1,
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_119",
+        "raw_bm25": 56.07,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_120",
+        "raw_bm25": 53.76,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_121",
+        "raw_bm25": 54.02,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_122",
+        "raw_bm25": 47.57,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_123",
+        "raw_bm25": 55.59,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_124",
+        "raw_bm25": 68.24,
+        "score": 67,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_125",
+        "raw_bm25": 55.28,
+        "score": 48,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_126",
+        "raw_bm25": 47.99,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_127",
+        "raw_bm25": 27.46,
+        "score": 7,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_128",
+        "raw_bm25": 38.75,
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_129",
+        "raw_bm25": 48.04,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_130",
+        "raw_bm25": 44.42,
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_131",
+        "raw_bm25": 61.38,
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_132",
+        "raw_bm25": 50.2,
+        "score": 41,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_133",
+        "raw_bm25": 79.19,
+        "score": 83,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_134",
+        "raw_bm25": 43.79,
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_135",
+        "raw_bm25": 77.07,
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_136",
+        "raw_bm25": 51.43,
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_137",
+        "raw_bm25": 43.24,
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_138",
+        "raw_bm25": 49.41,
+        "score": 40,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_139",
+        "raw_bm25": 45.15,
+        "score": 33,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_140",
+        "raw_bm25": 54.67,
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_141",
+        "raw_bm25": 58.27,
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_142",
+        "raw_bm25": 44.91,
+        "score": 33,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_143",
+        "raw_bm25": 76.5,
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_144",
+        "raw_bm25": 52.87,
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_145",
+        "raw_bm25": 66.72,
+        "score": 65,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_146",
+        "raw_bm25": 44.01,
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_147",
+        "raw_bm25": 29.81,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_148",
+        "raw_bm25": 72.3,
+        "score": 73,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_149",
+        "raw_bm25": 23.79,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_150",
+        "raw_bm25": 39.01,
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_151",
+        "raw_bm25": 25.99,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_152",
+        "raw_bm25": 25.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_153",
+        "raw_bm25": 56.07,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_154",
+        "raw_bm25": 77.25,
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_155",
+        "raw_bm25": 53.58,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_156",
+        "raw_bm25": 24.25,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_157",
+        "raw_bm25": 29.82,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_158",
+        "raw_bm25": 45.57,
+        "score": 34,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_159",
+        "raw_bm25": 60.39,
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_160",
+        "raw_bm25": 47.67,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_161",
+        "raw_bm25": 40.88,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_162",
+        "raw_bm25": 57.62,
+        "score": 52,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_163",
+        "raw_bm25": 58.73,
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_164",
+        "raw_bm25": 38.51,
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_165",
+        "raw_bm25": 31.41,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_166",
+        "raw_bm25": 59.89,
+        "score": 55,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_167",
+        "raw_bm25": 51.64,
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_168",
+        "raw_bm25": 43.08,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_169",
+        "raw_bm25": 55.98,
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_170",
+        "raw_bm25": 60.34,
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_171",
+        "raw_bm25": 47.67,
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_172",
+        "raw_bm25": 62.04,
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_173",
+        "raw_bm25": 24.09,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_174",
+        "raw_bm25": 25.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_175",
+        "raw_bm25": 45.48,
+        "score": 34,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_176",
+        "raw_bm25": 89.25,
+        "score": 95,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_177",
+        "raw_bm25": 51.21,
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_178",
+        "raw_bm25": 34.81,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_179",
+        "raw_bm25": 65.25,
+        "score": 63,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_180",
+        "raw_bm25": 30.22,
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_181",
+        "raw_bm25": 60.6,
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_182",
+        "raw_bm25": 66.45,
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_183",
+        "raw_bm25": 60.21,
+        "score": 55,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_184",
+        "raw_bm25": 46.24,
+        "score": 35,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_185",
+        "raw_bm25": 59.21,
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_186",
+        "raw_bm25": 69.65,
+        "score": 69,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_187",
+        "raw_bm25": 38.41,
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_188",
+        "raw_bm25": 39.6,
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_189",
+        "raw_bm25": 30.98,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_190",
+        "raw_bm25": 45.66,
+        "score": 34,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_191",
+        "raw_bm25": 25.17,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_192",
+        "raw_bm25": 42.89,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_193",
+        "raw_bm25": 47.1,
+        "score": 36,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_194",
+        "raw_bm25": 36.21,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_195",
+        "raw_bm25": 54.82,
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_196",
+        "raw_bm25": 51.5,
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_197",
+        "raw_bm25": 34.84,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_198",
+        "raw_bm25": 53.95,
+        "score": 46,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_199",
+        "raw_bm25": 57.42,
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_200",
+        "raw_bm25": 36.73,
+        "score": 21,
+        "decision": "REJECT"
+      }
+    ],
+    "keyword_overlap": [
+      {
+        "pair_id": "PAIR_001",
+        "jd_skills_count": 1,
+        "res_skills_count": 13,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 1.0,
+        "score": 72,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_002",
+        "jd_skills_count": 5,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_003",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_004",
+        "jd_skills_count": 5,
+        "res_skills_count": 7,
+        "overlap_count": 4,
+        "jaccard": 0.5,
+        "coverage": 0.8,
+        "score": 71,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_005",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_006",
+        "jd_skills_count": 4,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.2,
+        "coverage": 0.25,
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_007",
+        "jd_skills_count": 11,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_008",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_009",
+        "jd_skills_count": 8,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.111,
+        "coverage": 0.125,
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_010",
+        "jd_skills_count": 8,
+        "res_skills_count": 21,
+        "overlap_count": 5,
+        "jaccard": 0.208,
+        "coverage": 0.625,
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_011",
+        "jd_skills_count": 2,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_012",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.167,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_013",
+        "jd_skills_count": 11,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_014",
+        "jd_skills_count": 2,
+        "res_skills_count": 7,
+        "overlap_count": 1,
+        "jaccard": 0.125,
+        "coverage": 0.5,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_015",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_016",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_017",
+        "jd_skills_count": 2,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_018",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_019",
+        "jd_skills_count": 10,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.091,
+        "coverage": 0.1,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_020",
+        "jd_skills_count": 7,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_021",
+        "jd_skills_count": 8,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_022",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_023",
+        "jd_skills_count": 9,
+        "res_skills_count": 7,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_024",
+        "jd_skills_count": 0,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_025",
+        "jd_skills_count": 2,
+        "res_skills_count": 6,
+        "overlap_count": 1,
+        "jaccard": 0.143,
+        "coverage": 0.5,
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_026",
+        "jd_skills_count": 3,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_027",
+        "jd_skills_count": 3,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_028",
+        "jd_skills_count": 2,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_029",
+        "jd_skills_count": 6,
+        "res_skills_count": 7,
+        "overlap_count": 2,
+        "jaccard": 0.182,
+        "coverage": 0.333,
+        "score": 28,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_030",
+        "jd_skills_count": 5,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.2,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_031",
+        "jd_skills_count": 2,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.5,
+        "coverage": 0.5,
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_032",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_033",
+        "jd_skills_count": 3,
+        "res_skills_count": 9,
+        "overlap_count": 1,
+        "jaccard": 0.091,
+        "coverage": 0.333,
+        "score": 26,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_034",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_035",
+        "jd_skills_count": 6,
+        "res_skills_count": 3,
+        "overlap_count": 1,
+        "jaccard": 0.125,
+        "coverage": 0.167,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_036",
+        "jd_skills_count": 14,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_037",
+        "jd_skills_count": 0,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_038",
+        "jd_skills_count": 10,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.1,
+        "coverage": 0.1,
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_039",
+        "jd_skills_count": 4,
+        "res_skills_count": 13,
+        "overlap_count": 2,
+        "jaccard": 0.133,
+        "coverage": 0.5,
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_040",
+        "jd_skills_count": 5,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_041",
+        "jd_skills_count": 4,
+        "res_skills_count": 6,
+        "overlap_count": 1,
+        "jaccard": 0.111,
+        "coverage": 0.25,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_042",
+        "jd_skills_count": 1,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_043",
+        "jd_skills_count": 1,
+        "res_skills_count": 21,
+        "overlap_count": 1,
+        "jaccard": 0.048,
+        "coverage": 1.0,
+        "score": 71,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_044",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.2,
+        "coverage": 0.2,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_045",
+        "jd_skills_count": 2,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_046",
+        "jd_skills_count": 5,
+        "res_skills_count": 8,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_047",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_048",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_049",
+        "jd_skills_count": 7,
+        "res_skills_count": 7,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_050",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_051",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_052",
+        "jd_skills_count": 10,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_053",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_054",
+        "jd_skills_count": 10,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.091,
+        "coverage": 0.1,
+        "score": 9,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_055",
+        "jd_skills_count": 5,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.2,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_056",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_057",
+        "jd_skills_count": 6,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.143,
+        "coverage": 0.167,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_058",
+        "jd_skills_count": 0,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_059",
+        "jd_skills_count": 1,
+        "res_skills_count": 6,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_060",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_061",
+        "jd_skills_count": 2,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_062",
+        "jd_skills_count": 6,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_063",
+        "jd_skills_count": 5,
+        "res_skills_count": 5,
+        "overlap_count": 1,
+        "jaccard": 0.111,
+        "coverage": 0.2,
+        "score": 17,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_064",
+        "jd_skills_count": 0,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_065",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_066",
+        "jd_skills_count": 5,
+        "res_skills_count": 21,
+        "overlap_count": 2,
+        "jaccard": 0.083,
+        "coverage": 0.4,
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_067",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_068",
+        "jd_skills_count": 14,
+        "res_skills_count": 7,
+        "overlap_count": 2,
+        "jaccard": 0.105,
+        "coverage": 0.143,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_069",
+        "jd_skills_count": 8,
+        "res_skills_count": 9,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_070",
+        "jd_skills_count": 3,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_071",
+        "jd_skills_count": 13,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_072",
+        "jd_skills_count": 8,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_073",
+        "jd_skills_count": 1,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_074",
+        "jd_skills_count": 14,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_075",
+        "jd_skills_count": 5,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_076",
+        "jd_skills_count": 6,
+        "res_skills_count": 9,
+        "overlap_count": 2,
+        "jaccard": 0.154,
+        "coverage": 0.333,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_077",
+        "jd_skills_count": 8,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_078",
+        "jd_skills_count": 5,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.2,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_079",
+        "jd_skills_count": 4,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_080",
+        "jd_skills_count": 13,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.077,
+        "score": 7,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_081",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_082",
+        "jd_skills_count": 7,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_083",
+        "jd_skills_count": 8,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_084",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_085",
+        "jd_skills_count": 0,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_086",
+        "jd_skills_count": 4,
+        "res_skills_count": 6,
+        "overlap_count": 2,
+        "jaccard": 0.25,
+        "coverage": 0.5,
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_087",
+        "jd_skills_count": 6,
+        "res_skills_count": 8,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.167,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_088",
+        "jd_skills_count": 1,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_089",
+        "jd_skills_count": 16,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_090",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_091",
+        "jd_skills_count": 11,
+        "res_skills_count": 11,
+        "overlap_count": 2,
+        "jaccard": 0.1,
+        "coverage": 0.182,
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_092",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_093",
+        "jd_skills_count": 4,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_094",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_095",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.167,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_096",
+        "jd_skills_count": 5,
+        "res_skills_count": 2,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.2,
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_097",
+        "jd_skills_count": 0,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_098",
+        "jd_skills_count": 14,
+        "res_skills_count": 6,
+        "overlap_count": 1,
+        "jaccard": 0.053,
+        "coverage": 0.071,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_099",
+        "jd_skills_count": 3,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_100",
+        "jd_skills_count": 12,
+        "res_skills_count": 10,
+        "overlap_count": 2,
+        "jaccard": 0.1,
+        "coverage": 0.167,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_101",
+        "jd_skills_count": 11,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_102",
+        "jd_skills_count": 4,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_103",
+        "jd_skills_count": 5,
+        "res_skills_count": 11,
+        "overlap_count": 3,
+        "jaccard": 0.231,
+        "coverage": 0.6,
+        "score": 48,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_104",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.167,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_105",
+        "jd_skills_count": 0,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_106",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_107",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_108",
+        "jd_skills_count": 11,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_109",
+        "jd_skills_count": 4,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_110",
+        "jd_skills_count": 14,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_111",
+        "jd_skills_count": 11,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_112",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_113",
+        "jd_skills_count": 0,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_114",
+        "jd_skills_count": 5,
+        "res_skills_count": 9,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.2,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_115",
+        "jd_skills_count": 4,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_116",
+        "jd_skills_count": 7,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_117",
+        "jd_skills_count": 0,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_118",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_119",
+        "jd_skills_count": 3,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_120",
+        "jd_skills_count": 2,
+        "res_skills_count": 8,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_121",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_122",
+        "jd_skills_count": 0,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_123",
+        "jd_skills_count": 11,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_124",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_125",
+        "jd_skills_count": 1,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_126",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_127",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_128",
+        "jd_skills_count": 6,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.167,
+        "coverage": 0.167,
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_129",
+        "jd_skills_count": 7,
+        "res_skills_count": 7,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.143,
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_130",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_131",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_132",
+        "jd_skills_count": 5,
+        "res_skills_count": 5,
+        "overlap_count": 1,
+        "jaccard": 0.111,
+        "coverage": 0.2,
+        "score": 17,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_133",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_134",
+        "jd_skills_count": 12,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_135",
+        "jd_skills_count": 0,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_136",
+        "jd_skills_count": 9,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_137",
+        "jd_skills_count": 1,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_138",
+        "jd_skills_count": 1,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_139",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_140",
+        "jd_skills_count": 4,
+        "res_skills_count": 8,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_141",
+        "jd_skills_count": 16,
+        "res_skills_count": 6,
+        "overlap_count": 2,
+        "jaccard": 0.1,
+        "coverage": 0.125,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_142",
+        "jd_skills_count": 2,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.5,
+        "coverage": 0.5,
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_143",
+        "jd_skills_count": 6,
+        "res_skills_count": 10,
+        "overlap_count": 1,
+        "jaccard": 0.067,
+        "coverage": 0.167,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_144",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_145",
+        "jd_skills_count": 0,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_146",
+        "jd_skills_count": 1,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_147",
+        "jd_skills_count": 2,
+        "res_skills_count": 3,
+        "overlap_count": 1,
+        "jaccard": 0.25,
+        "coverage": 0.5,
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_148",
+        "jd_skills_count": 1,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_149",
+        "jd_skills_count": 13,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_150",
+        "jd_skills_count": 13,
+        "res_skills_count": 5,
+        "overlap_count": 2,
+        "jaccard": 0.125,
+        "coverage": 0.154,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_151",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_152",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_153",
+        "jd_skills_count": 0,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_154",
+        "jd_skills_count": 6,
+        "res_skills_count": 6,
+        "overlap_count": 1,
+        "jaccard": 0.091,
+        "coverage": 0.167,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_155",
+        "jd_skills_count": 7,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_156",
+        "jd_skills_count": 2,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_157",
+        "jd_skills_count": 4,
+        "res_skills_count": 6,
+        "overlap_count": 2,
+        "jaccard": 0.25,
+        "coverage": 0.5,
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_158",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_159",
+        "jd_skills_count": 6,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_160",
+        "jd_skills_count": 1,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_161",
+        "jd_skills_count": 2,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_162",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_163",
+        "jd_skills_count": 8,
+        "res_skills_count": 7,
+        "overlap_count": 2,
+        "jaccard": 0.154,
+        "coverage": 0.25,
+        "score": 22,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_164",
+        "jd_skills_count": 7,
+        "res_skills_count": 4,
+        "overlap_count": 1,
+        "jaccard": 0.1,
+        "coverage": 0.143,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_165",
+        "jd_skills_count": 5,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_166",
+        "jd_skills_count": 1,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_167",
+        "jd_skills_count": 6,
+        "res_skills_count": 8,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.167,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_168",
+        "jd_skills_count": 12,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_169",
+        "jd_skills_count": 2,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.5,
+        "coverage": 0.5,
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_170",
+        "jd_skills_count": 4,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_171",
+        "jd_skills_count": 1,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_172",
+        "jd_skills_count": 4,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_173",
+        "jd_skills_count": 9,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_174",
+        "jd_skills_count": 2,
+        "res_skills_count": 4,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_175",
+        "jd_skills_count": 12,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_176",
+        "jd_skills_count": 5,
+        "res_skills_count": 6,
+        "overlap_count": 4,
+        "jaccard": 0.571,
+        "coverage": 0.8,
+        "score": 73,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_177",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_178",
+        "jd_skills_count": 4,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_179",
+        "jd_skills_count": 8,
+        "res_skills_count": 4,
+        "overlap_count": 2,
+        "jaccard": 0.2,
+        "coverage": 0.25,
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_180",
+        "jd_skills_count": 8,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_181",
+        "jd_skills_count": 11,
+        "res_skills_count": 5,
+        "overlap_count": 1,
+        "jaccard": 0.067,
+        "coverage": 0.091,
+        "score": 8,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_182",
+        "jd_skills_count": 6,
+        "res_skills_count": 8,
+        "overlap_count": 1,
+        "jaccard": 0.077,
+        "coverage": 0.167,
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_183",
+        "jd_skills_count": 7,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.143,
+        "coverage": 0.143,
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_184",
+        "jd_skills_count": 5,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_185",
+        "jd_skills_count": 16,
+        "res_skills_count": 7,
+        "overlap_count": 2,
+        "jaccard": 0.095,
+        "coverage": 0.125,
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_186",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_187",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_188",
+        "jd_skills_count": 5,
+        "res_skills_count": 4,
+        "overlap_count": 2,
+        "jaccard": 0.286,
+        "coverage": 0.4,
+        "score": 36,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_189",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_190",
+        "jd_skills_count": 16,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.062,
+        "coverage": 0.062,
+        "score": 6,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_191",
+        "jd_skills_count": 2,
+        "res_skills_count": 5,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_192",
+        "jd_skills_count": 7,
+        "res_skills_count": 3,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_193",
+        "jd_skills_count": 4,
+        "res_skills_count": 2,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_194",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 1,
+        "jaccard": 0.2,
+        "coverage": 0.2,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_195",
+        "jd_skills_count": 3,
+        "res_skills_count": 6,
+        "overlap_count": 1,
+        "jaccard": 0.125,
+        "coverage": 0.333,
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_196",
+        "jd_skills_count": 1,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_197",
+        "jd_skills_count": 4,
+        "res_skills_count": 0,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_198",
+        "jd_skills_count": 4,
+        "res_skills_count": 8,
+        "overlap_count": 1,
+        "jaccard": 0.091,
+        "coverage": 0.25,
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_199",
+        "jd_skills_count": 5,
+        "res_skills_count": 6,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_200",
+        "jd_skills_count": 5,
+        "res_skills_count": 1,
+        "overlap_count": 0,
+        "jaccard": 0.0,
+        "coverage": 0.0,
+        "score": 5,
+        "decision": "REJECT"
+      }
+    ],
+    "random": [
+      {
+        "pair_id": "PAIR_001",
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_002",
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_003",
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_004",
+        "score": 41,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_005",
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_006",
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_007",
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_008",
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_009",
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_010",
+        "score": 85,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_011",
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_012",
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_013",
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_014",
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_015",
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_016",
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_017",
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_018",
+        "score": 87,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_019",
+        "score": 13,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_020",
+        "score": 81,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_021",
+        "score": 35,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_022",
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_023",
+        "score": 63,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_024",
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_025",
+        "score": 67,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_026",
+        "score": 85,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_027",
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_028",
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_029",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_030",
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_031",
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_032",
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_033",
+        "score": 29,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_034",
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_035",
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_036",
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_037",
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_038",
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_039",
+        "score": 22,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_040",
+        "score": 55,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_041",
+        "score": 54,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_042",
+        "score": 87,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_043",
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_044",
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_045",
+        "score": 68,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_046",
+        "score": 78,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_047",
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_048",
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_049",
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_050",
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_051",
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_052",
+        "score": 90,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_053",
+        "score": 89,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_054",
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_055",
+        "score": 83,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_056",
+        "score": 34,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_057",
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_058",
+        "score": 15,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_059",
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_060",
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_061",
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_062",
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_063",
+        "score": 22,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_064",
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_065",
+        "score": 45,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_066",
+        "score": 68,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_067",
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_068",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_069",
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_070",
+        "score": 55,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_071",
+        "score": 36,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_072",
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_073",
+        "score": 19,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_074",
+        "score": 87,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_075",
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_076",
+        "score": 78,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_077",
+        "score": 41,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_078",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_079",
+        "score": 69,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_080",
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_081",
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_082",
+        "score": 81,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_083",
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_084",
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_085",
+        "score": 17,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_086",
+        "score": 39,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_087",
+        "score": 14,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_088",
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_089",
+        "score": 61,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_090",
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_091",
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_092",
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_093",
+        "score": 82,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_094",
+        "score": 50,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_095",
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_096",
+        "score": 73,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_097",
+        "score": 60,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_098",
+        "score": 68,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_099",
+        "score": 28,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_100",
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_101",
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_102",
+        "score": 41,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_103",
+        "score": 81,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_104",
+        "score": 78,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_105",
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_106",
+        "score": 84,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_107",
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_108",
+        "score": 84,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_109",
+        "score": 61,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_110",
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_111",
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_112",
+        "score": 27,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_113",
+        "score": 75,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_114",
+        "score": 73,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_115",
+        "score": 21,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_116",
+        "score": 16,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_117",
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_118",
+        "score": 29,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_119",
+        "score": 90,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_120",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_121",
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_122",
+        "score": 86,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_123",
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_124",
+        "score": 59,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_125",
+        "score": 58,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_126",
+        "score": 86,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_127",
+        "score": 69,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_128",
+        "score": 77,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_129",
+        "score": 42,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_130",
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_131",
+        "score": 11,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_132",
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_133",
+        "score": 78,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_134",
+        "score": 44,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_135",
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_136",
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_137",
+        "score": 47,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_138",
+        "score": 65,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_139",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_140",
+        "score": 68,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_141",
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_142",
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_143",
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_144",
+        "score": 32,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_145",
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_146",
+        "score": 23,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_147",
+        "score": 90,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_148",
+        "score": 48,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_149",
+        "score": 74,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_150",
+        "score": 87,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_151",
+        "score": 35,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_152",
+        "score": 29,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_153",
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_154",
+        "score": 30,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_155",
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_156",
+        "score": 77,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_157",
+        "score": 10,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_158",
+        "score": 86,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_159",
+        "score": 51,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_160",
+        "score": 72,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_161",
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_162",
+        "score": 24,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_163",
+        "score": 56,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_164",
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_165",
+        "score": 40,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_166",
+        "score": 17,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_167",
+        "score": 40,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_168",
+        "score": 82,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_169",
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_170",
+        "score": 20,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_171",
+        "score": 72,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_172",
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_173",
+        "score": 78,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_174",
+        "score": 26,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_175",
+        "score": 26,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_176",
+        "score": 70,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_177",
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_178",
+        "score": 31,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_179",
+        "score": 43,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_180",
+        "score": 77,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_181",
+        "score": 87,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_182",
+        "score": 64,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_183",
+        "score": 37,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_184",
+        "score": 79,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_185",
+        "score": 35,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_186",
+        "score": 49,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_187",
+        "score": 61,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_188",
+        "score": 57,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_189",
+        "score": 66,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_190",
+        "score": 76,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_191",
+        "score": 67,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_192",
+        "score": 25,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_193",
+        "score": 41,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_194",
+        "score": 38,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_195",
+        "score": 18,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_196",
+        "score": 53,
+        "decision": "ESCALATE"
+      },
+      {
+        "pair_id": "PAIR_197",
+        "score": 12,
+        "decision": "REJECT"
+      },
+      {
+        "pair_id": "PAIR_198",
+        "score": 85,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_199",
+        "score": 80,
+        "decision": "ADVANCE"
+      },
+      {
+        "pair_id": "PAIR_200",
+        "score": 39,
+        "decision": "ESCALATE"
+      }
+    ]
+  }
+}

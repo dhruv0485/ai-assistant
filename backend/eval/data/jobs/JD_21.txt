@@ -1,0 +1,8 @@
+Title: Windows Software Engineer
+Company: Renewed Vision
+Location: United States
+
+The Renewed Vision Windows Software Engineer will develop innovative features and technologies that will drive the growth of our platform.You have experience creating and delivering solutions on Windows and a deep understanding of WPF and other Windows specific technologies. You are a proactive problem solver and system thinker — always keeping the product in view while working through complex details. You see working with others and contributing towards their success as an opportunity and not a chore.
+We want people who:Are experienced with developing and delivering high quality software on WindowsAre deeply familiar with C# and WPF applicationsCan focus on details while understanding the importance of timely updatesUnderstands the balance between refactor now vs. refactor laterConsistently seek to learn and develop both personally and professionally
+We really want people who:Have experience interfacing C# with native languages like C/C++Enjoy building up others, both personally and technicallyHave excellent written and verbal communication skillsTakes ownership of projects, works with loosely defined specs, and drives towards results
+Our best engineers will have:Experience measuring and optimizing the performance of Windows applicationsFamiliarity with video and audio libraries and OpenGL/DirectX rendering

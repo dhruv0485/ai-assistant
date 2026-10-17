@@ -1,0 +1,9 @@
+Title: Senior ETL Data Engineer (100% Remote)
+Company: Avesta Computer Services
+Location: United States
+
+Job Title: Senior ETL Data EngineerLocation: 100% RemoteType: Fulltime
+The ETL Data Engineer will focus on transforming raw data for consumption by BI and support the data platform development across multiple teams and phases. They will be a part of the Data team and contribute to developing data solutions that allow the business to leverage data as a strategic asset. The role requires expertise in data modelling and SQL transformations.
+Responsibilities include:Translate requirements and data mapping documents into a technical design.Develop, enhance, and maintain code following best practices and standards.Execute unit test plans and support regression/system testing.Debug and troubleshoot issues found during testing or production.Communicate project status, issues, and blockers with the team.Contribute to continuous improvement by identifying and addressing opportunities.
+Qualifications / Skills:Minimum of 5 years of experience in ETL/ELT development within a Data Warehouse.Understanding of enterprise data warehousing best practices and standards.Familiarity with DBT framework.Comfortable with git fundamentals change management.Minimum of 5 years of experience in ETL development.Minimum of 5 years of experience writing SQL queries.Minimum of 2 years of experience with Python.Minimum of 3 years of cloud experience with AWS, Azure or Google.Experience in P&C Insurance or Financial Services Industry preferred.Understanding of data warehousing best practices and standards.Experience in software engineering, including designing and developing systems.
+Education and/or Experience:Required knowledge & skills would typically be acquired through a bachelor’s degree in computer sciences or 5 or more years of related experience in ELT and/or Analytics Engineering

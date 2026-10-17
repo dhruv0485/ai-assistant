@@ -1,0 +1,518 @@
+{
+  "summary": {
+    "total_evaluated": 25,
+    "model_used": "qwen/qwen3.8-27b",
+    "mean_rubric_scores": {
+      "groundedness": 3.8,
+      "completeness": 4.2,
+      "actionability": 4.6,
+      "objectivity": 5.0,
+      "decision_alignment": 4.88
+    },
+    "overall_explanation_quality_score": 81.2,
+    "judge_human_agreement_rate_pct": 36.0,
+    "judge_ai_agreement_rate_pct": 96.0
+  },
+  "evaluations": [
+    {
+      "pair_id": "PAIR_001",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "ADVANCE",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "ADVANCE",
+      "rubric_scores": {
+        "groundedness": 1,
+        "completeness": 2,
+        "actionability": 3,
+        "objectivity": 5,
+        "decision_alignment": 4
+      },
+      "overall_quality_score": 30.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI explanation contains severe hallucinations, citing specific technologies (Java, C++, PHP, Hibernate, JSMVC) that are not present in the provided resume extract, which only lists general management and Agile experience. While the final decision aligns with the human ground truth, the reasoning is factually unsupported by the provided text.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_007",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified that the candidate's resume (Utility IT/CMMS/GIS) has zero overlap with the DevOps/Azure/Kubernetes requirements, whereas the human ground truth appears to be a hallucination or error, citing 'verified software engineering track record' and 'matching programming languages' that are not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_008",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified that the candidate's resume describes an IT Manager/BI role with no evidence of the required Java, Microservices, or React skills, whereas the human ground truth appears to be erroneous or based on information not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_009",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 38.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinated specific details not present in the resume (Chemical Engineering degree, VB Script), which severely compromises groundedness. However, the core assessment that the candidate lacks the required ML/AI experience is factually correct based on the provided text, making the REJECT decision logically sound despite the human's likely error.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_010",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "ESCALATE",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "ADVANCE",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 4
+      },
+      "overall_quality_score": 56.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": false,
+      "judge_critique": "The AI hallucinated specific cloud platform details (AWS/Azure) not present in the provided resume extract, leading to a factually incorrect rejection rationale. The candidate's 3 years of experience and full-stack skill set align with the human's assessment for advancement, making the AI's 'ESCALATE' decision based on fabricated gaps incorrect.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_014",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 38.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinates specific skills (C++, Python, Windows) not present in the provided resume extract, which only lists Drupal, PHP, HTML/CSS, and jQuery. While the AI's rejection decision is technically correct based on the visible mismatch between web development and embedded firmware, the human ground truth appears to be erroneous or based on unseen data, as the provided resume shows zero evidence of the required display/firmware expertise.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_017",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified that the candidate is a PMO Manager with no evidence of the required technical skills (AWS, Spark, Python), whereas the human ground truth appears to be hallucinated or based on a different candidate, as the provided resume contains zero data engineering experience.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_019",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 38.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinated a 'Chemical Engineering' background which is not present in the provided resume extract, significantly undermining the groundedness of the explanation. However, the final decision to reject is correct as the candidate's profile (QA/Testing, junior level) is fundamentally misaligned with a Senior Embedded SRE role, contradicting the human ground truth which appears to be an error.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_003",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI explanation is perfectly grounded, accurately identifying the complete lack of technical overlap between the HR candidate and the Robotics Software Engineer role, and correctly justifies the rejection with specific missing skills.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_005",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 4,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 82.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the fundamental domain mismatch and justified the rejection, but it hallucinated specific HRIS tools (UltiPro, PeopleSoft) that are not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_006",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 4,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 96.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the total mismatch between the HR candidate and the Java Developer role, though it hallucinated an 'MBA' credential not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_011",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the complete domain mismatch between the HR/Safety candidate and the GCP Data Engineer role, providing a clear, factual, and decisive rejection rationale that aligns perfectly with the human ground truth.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_013",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the complete domain mismatch between an HR Generalist and a DevOps Engineer, accurately citing the absence of required technical skills without hallucinating any experience.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_018",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the complete domain mismatch between the HR/Payroll candidate and the Azure Cloud Engineer role, accurately citing the absence of required technical skills and certifications without hallucinating any experience.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_024",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI explanation is perfectly grounded in the resume, accurately identifying the complete lack of technical skills required for a Data Engineer role, and aligns seamlessly with the human ground truth decision.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_028",
+      "match_type": "clear_mismatch",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "REJECT",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 4,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 96.0,
+      "agrees_with_human": true,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the complete lack of technical fit, though it slightly hallucinated 'retail' experience which is not explicitly stated in the provided resume extract (the resume mentions automotive and start-ups). The decision and core reasoning are perfectly aligned with the ground truth.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_002",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 4,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 60.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinated specific tools (SCSM, Cherwell) not present in the provided resume extract, and its decision to REJECT contradicts the human ground truth which identified a logistical escalation need despite skill mismatches.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_004",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 4
+      },
+      "overall_quality_score": 56.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinated specific skills (PowerBI, SSRS) not present in the provided resume extract, which undermines its groundedness. While the human flagged a 'hard case' due to ambiguity, the visible resume content shows a Master Data Manager with no cloud infrastructure experience, making the AI's rejection technically defensible despite the hallucination.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_012",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the candidate as an IT Manager with no relevant data engineering experience, whereas the human ground truth appears to be mismatched (describing a CS student). The AI's rejection is factually accurate based on the provided resume.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_015",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 4,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 96.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified a fundamental skill mismatch (IT Support vs. Data Engineering) that the human recruiter missed or misinterpreted as 'overqualification'. The candidate lacks the core technical competencies (SQL, ETL) required for the role, making rejection the appropriate action rather than escalation.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_016",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 2,
+        "completeness": 3,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 58.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI hallucinated specific technologies (Microsoft Exchange, Office 365) not present in the provided resume extract, which only lists generic IT management and operations skills. While the human ground truth suggests a 'Java/C++' background, the provided resume extract contains zero evidence of software engineering, making the AI's rejection logically sound based on the available text, despite the factual errors in the explanation.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_021",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 4,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 96.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified that the resume describes an Early Childhood Education career with no evidence of the required Senior Full Stack engineering skills, whereas the human ground truth appears to be based on a different candidate or contains a significant error (citing Java/C++/Python/Go skills not present in the provided text).",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_025",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 4,
+        "actionability": 4,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 90.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified the severe mismatch between the candidate's Business Systems Analyst profile (legacy on-premise tech) and the GCP Data Engineer role, whereas the human ground truth appears to be based on a different candidate profile (CS student with GitHub portfolio) not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_026",
+      "match_type": "hard_case",
+      "difficulty": "hard",
+      "ai_decision": "REJECT",
+      "human_decision": "ESCALATE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified a fundamental role mismatch (DBA vs. Frontend SWE) based on the provided resume, whereas the human ground truth appears to be based on a different candidate profile (CS student) not present in the input data.",
+      "model_used": "qwen/qwen3.8-27b"
+    },
+    {
+      "pair_id": "PAIR_020",
+      "match_type": "clear_match",
+      "difficulty": "easy",
+      "ai_decision": "REJECT",
+      "human_decision": "ADVANCE",
+      "judge_recommended_decision": "REJECT",
+      "rubric_scores": {
+        "groundedness": 5,
+        "completeness": 5,
+        "actionability": 5,
+        "objectivity": 5,
+        "decision_alignment": 5
+      },
+      "overall_quality_score": 100.0,
+      "agrees_with_human": false,
+      "agrees_with_ai": true,
+      "judge_critique": "The AI correctly identified a fundamental mismatch between the candidate's IT Operations/Management background and the Senior Software Engineer role, whereas the human ground truth appears to be erroneous in claiming a 'verified software engineering track record' that is not present in the provided resume extract.",
+      "model_used": "qwen/qwen3.8-27b"
+    }
+  ]
+}
